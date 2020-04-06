@@ -1,0 +1,3 @@
+string voice_selection
+---
+bool control_voice
