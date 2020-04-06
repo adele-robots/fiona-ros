@@ -1,20 +1,20 @@
-#include "ROSSayThisSpark.h"
+#include "ROSVoiceSpark.h"
 
 #ifdef _WIN32
 #else
 extern "C"
 Component *createComponent(char *componentInstanceName, char *componentType, ComponentSystem *componentSystem)
 {
-        if (!strcmp(componentType, "ROSSayThisSpark"))
-                return new ROSSayThisSpark(componentInstanceName,componentSystem);
+        if (!strcmp(componentType, "ROSVoiceSpark"))
+                return new ROSVoiceSpark(componentInstanceName,componentSystem);
         else
                 return NULL;
 }
 #endif
 
-// Initializes the ROSSayThisSpark component.
+// Initializes the ROSVoiceSpark component.
 
-void ROSSayThisSpark::init(void){
+void ROSVoiceSpark::init(void){
 	bool remap_name = true;
         bool node_name_empty = true;
         std::map<std::string, std::string> remaps;
@@ -24,12 +24,12 @@ void ROSSayThisSpark::init(void){
         ros::init(remaps, node_name, (uint32_t)0);
 }
 
-/// Uninitializes the ROSSayThisSpark component.
+/// Uninitializes the ROSVoiceSpark component.
 
-void ROSSayThisSpark::quit(void) {
+void ROSVoiceSpark::quit(void) {
 }
 
-void ROSSayThisSpark::process(){
+void ROSVoiceSpark::process(){
 	ros::NodeHandle n;
 	ros::ServiceServer service = n.advertiseService("fiona_service", callbackROS);
   	ros::spin();

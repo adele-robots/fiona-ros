@@ -34,6 +34,7 @@ protected:
 
 bool callbackROS(fiona_pkg::AudioBuffer_srv::Request  &req, fiona_pkg::AudioBuffer_srv::Response &res)
 {
+	res.audiobuffer = false;
 	IAudioQueue *myAudioQueue;
         myAudioQueue->queueAudioBuffer((char*)req.buffer.c_str(), req.size);
 	res.audiobuffer = true;

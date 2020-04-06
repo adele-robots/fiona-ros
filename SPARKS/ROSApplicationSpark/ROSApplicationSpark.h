@@ -33,7 +33,8 @@ protected:
 };
 
 bool callbackROS(fiona_pkg::Application_srv::Request  &req, fiona_pkg::Application_srv::Response &res)
-{	
+{
+	res.application = false;	
 	IApplication *myApplication;
         myApplication->run();
 	res.application = true;

@@ -9,11 +9,11 @@
 
 #include <stdlib.h>
 
-class ROSConcurrentStartSpark:
+class ROSConcurrentSpark:
 	public Component
 {
 public:
-	ROSConcurrentStartSpark(
+	ROSConcurrentSpark(
 			char *instanceName,
 			ComponentSystem *cs
 			) : Component(instanceName, cs)
@@ -35,9 +35,22 @@ protected:
 bool callbackROS(fiona_pkg::Concurrent_srv::Request  &req, fiona_pkg::Concurrent_srv::Response &res)
 {
 	IConcurrent *myConcurrent;
-        myConcurrent->start();
-	res.concurrent = true;
-        return true;
+	if (!strcmp(req.start_stop.c_str(), "start")
+	{
+        	myConcurrent->start();
+		res.concurrent = true;
+        }
+	
+	if (!strcmp(req.start_stop.c_str(), "stop")
+        {
+                myConcurrent->stop();
+                res.concurrent = true;
+        }
+
+	else
+		res.concurrent = false;
+
+	return true;
 }
 
 #endif

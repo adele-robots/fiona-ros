@@ -35,7 +35,12 @@ protected:
 bool callbackROS(fiona_pkg::CameraParameters_srv::Request  &req, fiona_pkg::CameraParameters_srv::Response &res)
 {
 	ICamera *myCamera;
-        myCamera->setCameraParameters(req.IsOrtho, req.VisionAngle, req.nearClippingPlane, req.FarClippingPlane);
+	if (req.IsOrtho == 1)
+		myCamera->setCameraParameters(true, req.VisionAngle, req.nearClippingPlane, req.FarClippingPlane);
+	
+	else
+        	myCamera->setCameraParameters(false, req.VisionAngle, req.nearClippingPlane, req.FarClippingPlane);
+	
 	res.camera_parameters = true;
         return true;
 }

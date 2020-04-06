@@ -1,21 +1,21 @@
-#include "ROSConcurrentStartSpark.h"
+#include "ROSWindowSpark.h"
 
 #ifdef _WIN32
 #else
 extern "C"
 Component *createComponent(char *componentInstanceName, char *componentType, ComponentSystem *componentSystem)
 {
-        if (!strcmp(componentType, "ROSConcurrentStartSpark"))
-                return new ROSConcurrentStartSpark(componentInstanceName,componentSystem);
+        if (!strcmp(componentType, "ROSWindowSpark"))
+                return new ROSWindowSpark(componentInstanceName,componentSystem);
         else
                 return NULL;
 }
 #endif
 
-// Initializes the ROSConcurrentStartSpark component.
+// Initializes the ROSWindowSpark component.
 
-void ROSConcurrentStartSpark::init(void){
-	bool remap_name = true;
+void ROSWindowSpark::init(void){
+  	bool remap_name = true;
         bool node_name_empty = true;
         std::map<std::string, std::string> remaps;
         if (remap_name) remaps["__name"] = "fiona_service";
@@ -24,14 +24,15 @@ void ROSConcurrentStartSpark::init(void){
         ros::init(remaps, node_name, (uint32_t)0);
 }
 
-/// Uninitializes the ROSConcurrentStartSpark component.
+/// Uninitializes the ROSWindowSpark component.
 
-void ROSConcurrentStartSpark::quit(void) {
+void ROSWindowSpark::quit(void) {
 }
 
-void ROSConcurrentStartSpark::process(){
+void ROSWindowSpark::process(){
 	ros::NodeHandle n;
 	ros::ServiceServer service = n.advertiseService("fiona_service", callbackROS);
   	ros::spin();
 }
+
 

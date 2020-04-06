@@ -1,21 +1,21 @@
-#include "ROSWaitEndOfSpeechSpark.h"
+#include "ROSControlVoiceSpark.h"
 
 #ifdef _WIN32
 #else
 extern "C"
 Component *createComponent(char *componentInstanceName, char *componentType, ComponentSystem *componentSystem)
 {
-        if (!strcmp(componentType, "ROSWaitEndOfSpeechSpark"))
-                return new ROSWaitEndOfSpeechSpark(componentInstanceName,componentSystem);
+        if (!strcmp(componentType, "ROSControlVoiceSpark"))
+                return new ROSControlVoiceSpark(componentInstanceName,componentSystem);
         else
                 return NULL;
 }
 #endif
 
-// Initializes the ROSWaitEndOfSpeechSpark component.
+// Initializes the ROSControlVoiceSpark component.
 
-void ROSWaitEndOfSpeechSpark::init(void){
-  	bool remap_name = true;
+void ROSControlVoiceSpark::init(void){
+	bool remap_name = true;
         bool node_name_empty = true;
         std::map<std::string, std::string> remaps;
         if (remap_name) remaps["__name"] = "fiona_service";
@@ -24,15 +24,14 @@ void ROSWaitEndOfSpeechSpark::init(void){
         ros::init(remaps, node_name, (uint32_t)0);
 }
 
-/// Uninitializes the ROSWaitEndOfSpeechSpark component.
+/// Uninitializes the ROSControlVoiceSpark component.
 
-void ROSWaitEndOfSpeechSpark::quit(void) {
+void ROSControlVoiceSpark::quit(void) {
 }
 
-void ROSWaitEndOfSpeechSpark::process(){
+void ROSControlVoiceSpark::process(){
 	ros::NodeHandle n;
 	ros::ServiceServer service = n.advertiseService("fiona_service", callbackROS);
   	ros::spin();
 }
-
 

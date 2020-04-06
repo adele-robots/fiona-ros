@@ -37,6 +37,7 @@ public:
 
 bool callbackROS(fiona_pkg::Animation_srv::Request  &req, fiona_pkg::Animation_srv::Response &res)
 {
+	res.animation = false;
 	IAnimation *myAnimation;
         myAnimation->playAnimation((char*)req.avatarFilename.c_str());
 	res.animation = true;

@@ -9,11 +9,11 @@
 
 #include <stdlib.h>
 
-class ROSStartSpeakingSpark:
+class ROSControlVoiceSpark:
 	public Component
 {
 public:
-	ROSStartSpeakingSpark(
+	ROSControlVoiceSpark(
 			char *instanceName,
 			ComponentSystem *cs
 			) : Component(instanceName, cs)
@@ -35,9 +35,32 @@ protected:
 bool callbackROS(fiona_pkg::ControlVoice_srv::Request  &req, fiona_pkg::ControlVoice_srv::Response &res)
 {
 	IControlVoice *myControlVoice;
-        myControlVoice->startSpeaking();
-	res.control_voice = true;
-        return true;
+
+	if (!strcmp(req.voice_selection.c_str(), "speaking")
+        {
+                myControlVoice->startSpeaking();
+        	res.control_voice = true;
+        }
+
+        if (!strcmp(req.voice_selection.c_str(), "voice")
+        {
+		myControlVoice->startVoice();
+        	res.control_voice = true;
+        }
+
+	if (!strcmp(req.voice_selection.c_str(), "nospeaking")
+        {
+                myControlVoice->stopSpeaking();
+                res.control_voice = true;
+        }
+
+	else
+		res.control_voice = false;
+
+	return true;
 }
 
 #endif
+
+
+

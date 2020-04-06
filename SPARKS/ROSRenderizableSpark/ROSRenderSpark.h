@@ -36,7 +36,7 @@ bool callbackROS(fiona_pkg::Renderizable_srv::Request  &req, fiona_pkg::Renderiz
 {
 	IRenderizable *myRenderizable;
         myRenderizable->render();
-	res.renderizable = true;
+	res.render = true;
         return true;
 }
 

@@ -1,20 +1,20 @@
-#include "ROSStopSpeakingSpark.h"
+#include "ROSConcurrentSpark.h"
 
 #ifdef _WIN32
 #else
 extern "C"
 Component *createComponent(char *componentInstanceName, char *componentType, ComponentSystem *componentSystem)
 {
-        if (!strcmp(componentType, "ROSStopSpeakingSpark"))
-                return new ROSStopSpeakingSpark(componentInstanceName,componentSystem);
+        if (!strcmp(componentType, "ROSConcurrentSpark"))
+                return new ROSConcurrentSpark(componentInstanceName,componentSystem);
         else
                 return NULL;
 }
 #endif
 
-// Initializes the ROSStopSpeakingSpark component.
+// Initializes the ROSConcurrentSpark component.
 
-void ROSStopSpeakingSpark::init(void){
+void ROSConcurrentSpark::init(void){
 	bool remap_name = true;
         bool node_name_empty = true;
         std::map<std::string, std::string> remaps;
@@ -24,15 +24,14 @@ void ROSStopSpeakingSpark::init(void){
         ros::init(remaps, node_name, (uint32_t)0);
 }
 
-/// Uninitializes the ROSStopSpeakingSpark component.
+/// Uninitializes the ROSConcurrentSpark component.
 
-void ROSStopSpeakingSpark::quit(void) {
+void ROSConcurrentSpark::quit(void) {
 }
 
-void ROSStopSpeakingSpark::process(){
+void ROSConcurrentSpark::process(){
 	ros::NodeHandle n;
 	ros::ServiceServer service = n.advertiseService("fiona_service", callbackROS);
   	ros::spin();
 }
-
 

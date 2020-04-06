@@ -9,11 +9,11 @@
 
 #include <stdlib.h>
 
-class ROSSayThisSpark:
+class ROSVoiceSpark:
 	public Component
 {
 public:
-	ROSSayThisSpark(
+	ROSVoiceSpark(
 			char *instanceName,
 			ComponentSystem *cs
 			) : Component(instanceName, cs)
@@ -35,9 +35,25 @@ protected:
 bool callbackROS(fiona_pkg::VoiceSay_srv::Request  &req, fiona_pkg::VoiceSay_srv::Response &res)
 {
         IVoice *myVoice;
-	myVoice->sayThis((char*)req.prompt.c_str());
-	res.voice_say = true;
-        return true;
+	if (!strcmp(req.select.c_str(), "say"))
+	{	
+		myVoice->sayThis((char*)req.prompt.c_str());
+		res.voice_say = true;
+        }
+	if (!strcmp(req.select.c_str(), "stop"))
+        {       
+                myVoice->stopSpeech();
+		res.voice_say = true;
+        }
+	if (!strcmp(req.select.c_str(), "wait"))
+        {       
+                myVoice->waitEndOfSpeech();
+                res.voice_say = true;
+        }
+	else
+                res.voice_say = false;
+	
+	return true;
 }
 
 #endif
