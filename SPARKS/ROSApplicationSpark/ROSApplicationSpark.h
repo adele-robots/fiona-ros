@@ -4,17 +4,10 @@
 #include "ros/ros.h"
 #include "Application_srv.h"
 
-//#include "ScriptingGeneral.h"
-
 #include "Component.h"
 #include "IApplication.h"
 
-//#include <v8.h>
-#include <string>
-#include <map>
 #include <stdlib.h>
-//using namespace std;
-//using namespace v8;
 
 class ROSApplicationSpark:
 	public Component

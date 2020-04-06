@@ -4,17 +4,10 @@
 #include "ros/ros.h"
 #include "Concurrent_srv.h"
 
-//#include "ScriptingGeneral.h"
-
 #include "Component.h"
 #include "IConcurrent.h"
 
-//#include <v8.h>
-#include <string>
-#include <map>
 #include <stdlib.h>
-using namespace std;
-//using namespace v8;
 
 class ROSConcurrentStopSpark:
 	public Component

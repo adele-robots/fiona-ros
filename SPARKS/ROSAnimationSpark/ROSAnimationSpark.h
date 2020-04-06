@@ -1,11 +1,6 @@
 #ifndef __ROSAnimationSpark_H
 #define __ROSAnimationSpark_H
 
-//#include <v8.h>
-//#include <string>
-//#include <map>
-//#include <stdlib.h>
-
 #include "ros/ros.h"
 #include "Animation_srv.h"
 
@@ -13,8 +8,6 @@
 #include "IAnimation.h"
 
 #include <stdlib.h>
-//using namespace std;
-//using namespace v8;
 
 class ROSAnimationSpark:
 	public Component,

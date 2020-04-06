@@ -4,17 +4,10 @@
 #include "ros/ros.h"
 #include "Eyes_srv.h"
 
-//#include "ScriptingGeneral.h"
-
 #include "Component.h"
 #include "IEyes.h"
 
-//#include <v8.h>
-#include <string>
-#include <map>
 #include <stdlib.h>
-using namespace std;
-//using namespace v8;
 
 class ROSEyesSpark:
 	public Component

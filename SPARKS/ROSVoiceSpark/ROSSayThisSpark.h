@@ -4,17 +4,10 @@
 #include "ros/ros.h"
 #include "VoiceSay_srv.h"
 
-//#include "ScriptingGeneral.h"
-
 #include "Component.h"
 #include "IVoice.h"
 
-//#include <v8.h>
-#include <string>
-#include <map>
 #include <stdlib.h>
-using namespace std;
-//using namespace v8;
 
 class ROSSayThisSpark:
 	public Component
