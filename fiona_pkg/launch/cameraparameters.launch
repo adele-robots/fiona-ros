@@ -1,0 +1,4 @@
+<launch>
+   <arg name="IsOrtho/VisionAngle/nearClippingPlane/FarClippingPlane"/>
+   <node pkg="fiona_pkg" type="fiona_cameraparameters_client" name="fiona_cameraparameters_client" args="$(arg IsOrtho/VisionAngle/nearClippingPlane/FarClippingPlane)" output="screen" />
+</launch>

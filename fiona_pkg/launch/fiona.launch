@@ -1,5 +1,0 @@
-<launch>
-	<node pkg="fiona_pkg" type="fiona_pkg_node" name="fiona_pkg_node" output="screen"></node>
-</launch>
-
-

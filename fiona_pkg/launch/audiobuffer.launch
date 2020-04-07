@@ -1,0 +1,4 @@
+<launch>
+   <arg name="selection/buffer/size"/>
+   <node pkg="fiona_pkg" type="fiona_animation_client" name="fiona_animation_client" args="$(arg selection/buffer/size")" output="screen" />
+</launch>

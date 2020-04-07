@@ -1,0 +1,4 @@
+<launch>
+   <arg name="pan/tilt"/>
+   <node pkg="fiona_pkg" type="fiona_neck_client" name="fiona_eyes_client" args="$(arg pan/tilt)" output="screen" />
+</launch>

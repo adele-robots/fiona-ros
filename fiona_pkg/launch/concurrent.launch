@@ -1,0 +1,4 @@
+<launch>
+   <arg name="start_stop"/>
+   <node pkg="fiona_pkg" type="fiona_concurrent_client" name="fiona_animation_client" args="$(arg start_stop)" output="screen" />
+</launch>

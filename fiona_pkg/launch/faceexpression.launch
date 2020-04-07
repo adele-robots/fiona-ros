@@ -1,0 +1,4 @@
+<launch>
+   <arg name="expressionName/intensity"/>
+   <node pkg="fiona_pkg" type="fiona_faceexpression_client" name="fiona_faceexpression_client" args="$(arg expressionName/intensity)" output="screen" />
+</launch>

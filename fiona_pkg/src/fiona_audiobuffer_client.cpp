@@ -11,8 +11,9 @@ int main (int argc , char **argv) {
 	
 	ros::ServiceClient client = n.serviceClient<fiona_pkg::AudioBuffer_srv>("fiona_service");
   	fiona_pkg::AudioBuffer_srv srv;
-  	srv.request.buffer.assign(argv[1]);
-	srv.request.size = atoll(argv[2]);
+	srv.request.selection.assign(argv[1]);
+  	srv.request.buffer.assign(argv[2]);
+	srv.request.size = atoll(argv[3]);
   	if (client.call(srv))
   	{
 		 ROS_INFO("Response: %s", srv.response.audiobuffer?"true":"false");

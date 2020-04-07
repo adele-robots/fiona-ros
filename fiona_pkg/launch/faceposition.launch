@@ -1,0 +1,4 @@
+<launch>
+   <arg name="isFaceDetected/x/y"/>
+   <node pkg="fiona_pkg" type="fiona_faceposition_client" name="fiona_animation_client" args="$(arg isFaceDetected/x/y)" output="screen" />
+</launch>

@@ -1,0 +1,3 @@
+<launch>
+   <node pkg="fiona_pkg" type="fiona_audiosize_client" name="fiona_audiosize_client" args="run" output="screen" />
+</launch>

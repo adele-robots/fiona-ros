@@ -1,0 +1,4 @@
+<launch>
+   <arg name="voice_selection"/>
+   <node pkg="fiona_pkg" type="fiona_controlvoice_client" name="fiona_animation_client" args="$(arg voice_selection)" output="screen" />
+</launch>

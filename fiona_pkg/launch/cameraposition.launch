@@ -1,0 +1,4 @@
+<launch>
+   <arg name="x/y/z"/>
+   <node pkg="fiona_pkg" type="fiona_cameraposition_client" name="fiona_cameraposition_client" args="$(arg x/y/z)" output="screen" />
+</launch>

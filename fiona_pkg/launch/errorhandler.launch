@@ -1,0 +1,4 @@
+<launch>
+   <arg name="msg"/>
+   <node pkg="fiona_pkg" type="fiona_errorhandler_client" name="fiona_errorhandler_client" args="$(arg msg)" output="screen" />
+</launch>

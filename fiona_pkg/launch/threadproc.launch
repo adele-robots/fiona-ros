@@ -1,0 +1,3 @@
+<launch>
+   <node pkg="fiona_pkg" type="fiona_threadproc_client" name="fiona_application_client" args="run" output="screen" />
+</launch>

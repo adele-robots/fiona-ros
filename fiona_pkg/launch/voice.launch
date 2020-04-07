@@ -1,0 +1,4 @@
+<launch>
+   <arg name="select/prompt"/>
+   <node pkg="fiona_pkg" type="fiona_voice_client" name="fiona_animation_client" args="$(arg select/prompt)" output="screen" />
+</launch>

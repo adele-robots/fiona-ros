@@ -1,0 +1,4 @@
+<launch>
+   <arg name="avatarFilename"/>
+   <node pkg="fiona_pkg" type="fiona_animation_client" name="fiona_animation_client" args="$(arg avatarFilename)" output="screen" />
+</launch>
