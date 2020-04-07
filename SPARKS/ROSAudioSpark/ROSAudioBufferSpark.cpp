@@ -1,21 +1,21 @@
-#include "ROSDequeueAudioBufferSpark.h"
+#include "ROSAudioBufferSpark.h"
 
 #ifdef _WIN32
 #else
 extern "C"
 Component *createComponent(char *componentInstanceName, char *componentType, ComponentSystem *componentSystem)
 {
-        if (!strcmp(componentType, "ROSDequeueAudioBufferSpark"))
-                return new ROSDequeueAudioBufferSpark(componentInstanceName,componentSystem);
+        if (!strcmp(componentType, "ROSAudioBufferSpark"))
+                return new ROSAudioBufferSpark(componentInstanceName,componentSystem);
         else
                 return NULL;
 }
 #endif
 
-// Initializes the ROSDequeueAudioBufferSpark component.
+// Initializes the ROSAudioBufferSpark component.
 
-void ROSDequeueAudioBufferSpark::init(void){
-	bool remap_name = true;
+void ROSAudioBufferSpark::init(void){
+  	bool remap_name = true;
         bool node_name_empty = true;
         std::map<std::string, std::string> remaps;
         if (remap_name) remaps["__name"] = "fiona_service";
@@ -24,15 +24,13 @@ void ROSDequeueAudioBufferSpark::init(void){
         ros::init(remaps, node_name, (uint32_t)0);
 }
 
-/// Uninitializes the ROSDequeueAudioBufferSpark component.
+/// Uninitializes the ROSAudioBufferSpark component.
 
-void ROSDequeueAudioBufferSpark::quit(void) {
+void ROSAudioBufferSpark::quit(void) {
 }
 
-void ROSDequeueAudioBufferSpark::process(){
+void ROSAudioBufferSpark::process(){
 	ros::NodeHandle n;
 	ros::ServiceServer service = n.advertiseService("fiona_service", callbackROS);
   	ros::spin();
 }
-
-

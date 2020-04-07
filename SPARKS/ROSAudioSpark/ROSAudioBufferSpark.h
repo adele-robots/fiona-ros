@@ -9,11 +9,11 @@
 
 #include <stdlib.h>
 
-class ROSDequeueAudioBufferSpark:
+class ROSAudioBufferSpark:
 	public Component
 {
 public:
-	ROSDequeueAudioBufferSpark(
+	ROSAudioBufferSpark(
 			char *instanceName,
 			ComponentSystem *cs
 			) : Component(instanceName, cs)
@@ -36,8 +36,19 @@ bool callbackROS(fiona_pkg::AudioBuffer_srv::Request  &req, fiona_pkg::AudioBuff
 {
 	res.audiobuffer = false;
 	IAudioQueue *myAudioQueue;
-        myAudioQueue->dequeueAudioBuffer((char*)req.buffer.c_str(), req.size);
-	res.audiobuffer = true;
+	if (!strcmp(req.selection.c_str(), "queue"))
+	{
+        	myAudioQueue->queueAudioBuffer((char*)req.buffer.c_str(), req.size);
+		res.audiobuffer = true;
+	}
+	if (!strcmp(req.selection.c_str(), "dequeue"))
+        {
+                myAudioQueue->dequeueAudioBuffer((char*)req.buffer.c_str(), req.size);
+                res.audiobuffer = true;
+        }
+	else
+		res.audiobuffer = false;
+
         return true;
 }
 
