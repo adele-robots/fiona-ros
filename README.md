@@ -38,6 +38,8 @@ As we want to establish a bidirectional communication between FIONA and ROS, we 
 We establish a request / reply done via a Service. A providing FIONA ROS-based Spark offers a service under a string name, and a ROS node of fiona_pkg client calls the service by sending the request message and awaiting the reply.
 
 #### FIONA ROS-based Sparks
+Full code is in [SPARKS](SPARKS) file.
+
 * **ROSAnimationSpark**: Used to make your avatar move.
 
 * **ROSApplicationSpark**: Used to launch a process.
@@ -71,11 +73,13 @@ We establish a request / reply done via a Service. A providing FIONA ROS-based S
 * **ROSWindowSpark**: Used to show/hide and get properties of window display.
 
 #### ROS nodes in fiona_pkg
-Our fiona_pkg contains a node (client) for each of the FIONA interfaces.
+Our fiona_pkg contains a node (client) for each of the FIONA interfaces.  
 
 Services are defined using srv files, so they are compiled into source code by our fiona_pkg client library. As there is a service for each FIONA interface, there is a srv file and a ROS node client for each interface too. This means that each srv file has specific requests and response depending on the interface they want information from.
 
 Some of the interfaces do not need any data coming from the request, so these requests are constant values already established into the launch files of the corresponding fiona_pkg node. From now on, these requests will be called void_request.
+
+Full nodes code is in [fiona_pkg/src](fiona_pkg/src) and srv files are in [fiona_pkg/srv](fiona_pkg/srv).
 
 **Client for ROSAnimationSpark**: Sends the avatar file name as a request and awaits a boolean reply that indicates if the avatar moves or not.
  - Node: fiona_animation_client.cpp.
@@ -156,3 +160,5 @@ Sends x, y and z angles and awaits a boolean reply indicating if those parameter
 Sends a void_request and an integer indicating the colordepth of the window.
  - Nodes: fiona_windowcolordepth_client
  - Srv: WindowColorDepth_srv.srv
+
+In order to see the steps for building fiona_pkg in your catkin workspace, go to [BUILDING.md](BUILDING.md).
