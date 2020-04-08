@@ -70,3 +70,89 @@ We establish a request / reply done via a Service. A providing FIONA ROS-based S
 
 * **ROSWindowSpark**: Used to show/hide and get properties of window display.
 
+#### ROS nodes in fiona_pkg
+Our fiona_pkg contains a node (client) for each of the FIONA interfaces.
+
+Services are defined using srv files, so they are compiled into source code by our fiona_pkg client library. As there is a service for each FIONA interface, there is a srv file and a ROS node client for each interface too. This means that each srv file has specific requests and response depending on the interface they want information from.
+
+Some of the interfaces do not need any data coming from the request, so these requests are constant values already established into the launch files of the corresponding fiona_pkg node. From now on, these requests will be called void_request.
+
+* **Client for ROSAnimationSpark**: Sends the avatar file name as a request and awaits a boolean reply that indicates if the avatar moves or not.
+ - Node: fiona_animation_client.cpp.
+ - Srv: Animation_srv.srv
+
+* **Client for ROSApplicationSpark**: Sends a void_request and awaits a boolean reply that indicates if the process is running or not.
+ - Node: fiona_application_client.cpp
+ - Srv: Application_srv.srv
+
+* **Client for ROSAsyncFatalErrorHandlerSpark**: Sends the exception/error msg and awaits a boolean reply that indicates if that error occurrs.
+ - Node: fiona_errorhandler_client.cpp
+ - Srv: AsyncFatalErrorHandler_srv.srv
+
+* **Clients for ROSAudioSpark: Sends three requests**: "queue" or "dequeue" to select that operation on the audio buffer, the buffer name and the audio size. Then awaits a boolean that indicates if the operation took place.
+ - Nodes: fiona_audiobuffer_client.cpp
+ - Srv: AudioBuffer_srv.srv
+
+Sends a void_request in order to receive the audio size.
+ - Nodes: fiona_audiosize_client.cpp 
+  - Srv: AudioSize_srv.srv
+
+* **Clients for ROSCameraSpark**: Sends 4 camera parameters and awaits a boolean reply indicating if those parameters were set correctly.
+ - Nodes: fiona_cameraparameters_client.cpp
+ - Srv: CameraParameters_srv.srv
+
+Sends x, y and z position and awaits a boolean reply indicating if those parameters were set correctly.
+ - Nodes: fiona_cameraposition_client.cpp
+ - Srv: CameraPosition_srv.srv
+
+Sends x, y and z angles and awaits a boolean reply indicating if those parameters were set correctly.
+ - Nodes: fiona_camerarotation_client
+ - Srv: CameraRotation_srv.srv
+
+* **Client for ROSConcurrentSpark**: Sends a start/stop and awaits a boolean reply that indicates if a thread has been started or stopped.
+ - Node: fiona_concurrent_client.cpp
+ - Srv: Concurrent_srv.srv
+
+* **Client for ROSControlVoiceSpark**: Sends a command for the avatar to start/stop speaking and select the voice. Then the reply is a boolean indicating if the action succeeded.
+ - Node: fiona_controlvoice_client.cpp
+ - Srv: ControlVoice_srv.srv
+
+* **Client for ROSDetectedFacePositionConsumerSpark**: Sends a boolean that indicates if there is a face in front of the camera and its x and y position. The response is a boolean that tells if there is or not a face in that position.
+ - Node: fiona_faceposition_client.cpp
+ - Srv: DetectedFacePositionConsumer_srv.srv
+
+* **Client for ROSEyesSpark**: Sends the position of the eyes in terms of two camera parameters: tilt and pan. The reply verifies if the eyes are indeed where we have indicated.
+ - Node: fiona_eyes_client.cpp
+ - Srv: Eyes_srv.srv
+
+* **Client for ROSFaceExpressionSpark**: Sends the name of the face expression and float indicating its intensity. Then the reply indicates if that is the expression detected.
+ - Node: fiona_faceexpression_client.cpp
+ - Srv: FaceExpression_srv.srv
+
+* **Client for ROSFrameEventSubscriberSpark**: Sends a void_request just to receive ..........
+ - Node: fiona_frame_client.cpp
+ - Srv: FrameEventSubscriber_srv.srv
+
+* **Client for ROSNeckSpark**: Sends the same parameters that fiona_eyes_client but in this cas for the head position. It receives a boolean indicating if a head is in that position.
+ - Node: fiona_neck_client.cpp
+ - Srv: Neck_srv.srv
+
+* **Client for ROSRenderizableSpark**: Sends a void_request to .........
+ - Node: fiona_render_client.cpp
+ - Srv: Renderizable_srv.srv
+
+* **Client for ROSThreadProcSpark**: Sends a void_request to .........
+ - Node: fiona_threadproc_client.cpp
+ - Srv: ThreadProc_srv.srv
+
+* **Client for ROSVoiceSpark**: Sends a command of "say"/"stop"/"wait" and a text, to tell the avatar to say that text, to stop speaking or to wait until it ends what it is saying. A boolean reply tells if the action succeded.
+ - Node: fiona_voice_client.cpp
+ - Srv: Voice_srv.srv
+
+* **Clients for ROSWindowSpark**: Sends a command to show, hide or make an operation with a window display and gets a boolean reply.
+ - Nodes: fiona_window_client.cpp
+ - Srv: Window_srv.srv
+
+Sends a void_request and an integer indicating the colordepth of the window.
+ - Nodes: fiona_windowcolordepth_client
+ - Srv: WindowColorDepth_srv.srv
