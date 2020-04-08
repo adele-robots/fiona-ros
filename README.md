@@ -33,3 +33,40 @@ As we want to establish a bidirectional communication between FIONA and ROS, we 
 
 1. ROS getting information from FIONA.
 2. FIONA getting information from ROS.
+
+### ROS getting information from FIONA
+We establish a request / reply done via a Service. A providing FIONA ROS-based Spark offers a service under a string name, and a ROS node of fiona_pkg client calls the service by sending the request message and awaiting the reply.
+
+#### FIONA ROS-based Sparks
+* **ROSAnimationSpark**: Used to make your avatar move.
+
+* **ROSApplicationSpark**: Used to launch a process.
+
+* **ROSAsyncFatalErrorHandlerSpark**: Used to handle errors.
+
+* **ROSAudioSpark**: Used to send and receive audio, and manage audio buffer.
+
+* **ROSCameraSpark**: Used to set position, angles and different parameters of the avatar's camera.
+
+* **ROSConcurrentSpark**: Used to start/stop threads.
+
+* **ROSControlVoiceSpark**: Used to make the avatar start/stop speaking and control its voice.
+
+* **ROSDetectedFacePositionConsumerSpark**: Used to send and receive the position of the detected human face through the camera.
+
+* **ROSEyesSpark**: Used to set the position of the eyes.
+
+* **ROSFaceExpressionSpark**: Used to change the expression of avatar's face.
+
+* **ROSFrameEventSubscriberSpark**:
+
+* **ROSNeckSpark**: Used to set avatar's head position.
+
+* **ROSRenderizableSpark**:
+
+* **ROSThreadProcSpark**:
+
+* **ROSVoiceSpark**: Used to communicate with a Text To Speech.
+
+* **ROSWindowSpark**: Used to show/hide and get properties of window display.
+
