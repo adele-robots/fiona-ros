@@ -1,0 +1,1 @@
+In order to build fiona_pkg on your local machine you need to hace ROS installed. This package has been tested with ROS melodic and kinetic but to get a correct performance with FIONA it is recomemndable kinetic.
