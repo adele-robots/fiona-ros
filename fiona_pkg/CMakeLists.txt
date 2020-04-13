@@ -34,12 +34,12 @@ add_service_files(DIRECTORY srv FILES Animation_srv.srv
 generate_messages(DEPENDENCIES std_msgs)
 catkin_package(CATKIN_DEPENDS message_runtime)
 
-#### Build talker ####
+#### Build listener ####
 include_directories(include ${catkin_INCLUDE_DIRS})
 
-add_executable(fiona_talker src/fiona_talker.cpp)
-target_link_libraries(fiona_talker ${catkin_LIBRARIES})
-add_dependencies(fiona_talker fiona_pkg_generate_messages_cpp)
+add_executable(fiona_listener src/fiona_listener.cpp)
+target_link_libraries(fiona_listener ${catkin_LIBRARIES})
+add_dependencies(fiona_listener fiona_pkg_generate_messages_cpp)
 
 #### Build clients ####
 # Client for ROSAnimationSpark
