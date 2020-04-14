@@ -19,8 +19,8 @@ void ROSEyesSpark::init(void){
         bool node_name_empty = true;
         std::map<std::string, std::string> remaps;
         if (remap_name) remaps["__name"] = "fiona_service";
-        std::string node_name = "fiona_service";
-        if (node_name_empty) node_name = "";
+        std::string node_name = "eyes";
+        if (node_name_empty) node_name = "eyes";
         ros::init(remaps, node_name, (uint32_t)0);
 }
 

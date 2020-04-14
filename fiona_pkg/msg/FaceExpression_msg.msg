@@ -1,0 +1,4 @@
+string expressionName
+float32 intensity
+---
+bool face_expression
