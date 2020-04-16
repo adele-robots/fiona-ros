@@ -16,7 +16,7 @@ int main (int argc , char **argv) {
 
   	if (client.call(srv))
   	{
-		 ROS_INFO("Response: %s", srv.response.voice_say.?"true":"false");
+		 ROS_INFO("Response: %s", srv.response.voice_say?"true":"false");
   	}
   	else
   	{
