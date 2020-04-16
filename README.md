@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/adele-robots/fiona-ros.svg?branch=master)](https://travis-ci.org/adele-robots/fiona-ros)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Integration of FIONA with ROS and ROS-Industrial 
 The objective of this project is to integrate FIONA with ROS and ROSIndustrial. This objective is divided into two main tasks: 
 1. To adapt the FIONA servers and tools so that they can run ROS-based applications. This will allow developers to build new components for FIONA using the ROS framework, and integrators to include these ROS components in their FIONA applications in a simple and intuitive way.
@@ -162,3 +165,19 @@ Sends a void_request and an integer indicating the colordepth of the window.
  - Srv: WindowColorDepth_srv.srv
 
 In order to see the steps for building fiona_pkg in your catkin workspace, go to [BUILDING.md](BUILDING.md).
+
+## Acknowledgement
+
+<a href="http://rosin-project.eu">
+  <img src="http://rosin-project.eu/wp-content/uploads/rosin_ack_logo_wide.png" 
+       alt="rosin_logo" height="60" >
+</a></br>
+
+Supported by ROSIN - ROS-Industrial Quality-Assured Robot Software Components.  
+More information: <a href="http://rosin-project.eu">rosin-project.eu</a>
+
+<img src="http://rosin-project.eu/wp-content/uploads/rosin_eu_flag.jpg" 
+     alt="eu_flag" height="45" align="left" >  
+
+This project has received funding from the European Union’s Horizon 2020  
+research and innovation programme under grant agreement no. 732287. 
