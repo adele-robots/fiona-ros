@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/adele-robots/fiona-ros.svg?branch=master)](https://travis-ci.org/adele-robots/fiona-ros)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Integration of FIONA with ROS and ROS-Industrial 
 The objective of this project is to integrate FIONA with ROS and ROSIndustrial. This objective is divided into two main tasks: 
 1. To adapt the FIONA servers and tools so that they can run ROS-based applications. This will allow developers to build new components for FIONA using the ROS framework, and integrators to include these ROS components in their FIONA applications in a simple and intuitive way.
