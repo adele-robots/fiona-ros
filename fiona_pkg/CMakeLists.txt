@@ -5,7 +5,28 @@ project(fiona_pkg)
 find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs message_generation)
 
 #### Declare ROS messages and services ####
-add_message_files(DIRECTORY msg FILES MyMessages.msg)
+add_message_files(DIRECTORY msg FILES Animation_msg.msg
+                                      Application_msg.msg
+                                      AsyncFatalErrorHandler_msg.msg
+                                      AudioBuffer_msg.msg
+                                      AudioSize_msg.msg
+                                      CameraParameters_msg.msg
+                                      CameraPosition_msg.msg
+                                      CameraRotation_msg.msg
+                                      Concurrent_msg.msg
+                                      ControlVoice_msg.msg
+                                      DetectedFacePositionConsumer_msg.msg
+                                      Eyes_msg.msg
+                                      FaceExpression_msg.msg
+                                      fiona_msg.msg
+                                      FrameEventSubscriber_msg.msg
+                                      Neck_msg.msg
+                                      Renderizable_msg.msg
+                                      ThreadProc_msg.msg
+                                      Voice_msg.msg
+                                      WindowColorDepth_msg.msg
+                                      Window_msg.msg)
+
 add_service_files(DIRECTORY srv FILES Animation_srv.srv
 				      Application_srv.srv
 				      AsyncFatalErrorHandler_srv.srv
