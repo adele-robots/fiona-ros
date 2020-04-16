@@ -22,6 +22,7 @@ env:
   global: # global settings for all jobs
     - ROS_REPO=ros
     - CCACHE_DIR=$HOME/.ccache # enables C/C++ caching in industrial_ci
+    - VERBOSE_OUTPUT='true'
   matrix: # each line is a job
 #    - ROS_DISTRO="lunar" ROS_REPO=ros-shadow-fixed # overrides the global
     - ROS_DISTRO="kinetic"
