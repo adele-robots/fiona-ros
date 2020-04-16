@@ -1,5 +1,5 @@
-#include "ros/ros.h"
-#include "std_msgs/String.h"
+#include <ros/ros.h>
+#include <std_msgs/String.h>
 
 /**
  * This listener demonstrates simple receipt of string messages from a FIONA Spark built as a ROS talker.
