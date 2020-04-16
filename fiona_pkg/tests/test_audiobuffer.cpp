@@ -13,7 +13,7 @@ TEST(TESTSuite, ValidFilename)
 
   fiona_pkg::AudioBuffer_srv srv;
   srv.request.selection = "queue";
-  srv.request.buffer ="buffer1";
+  srv.request.buffer = "buffer1";
   srv.request.size = 16;
   client.call(srv);
 

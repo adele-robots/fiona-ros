@@ -12,14 +12,13 @@ public:
 class DAudioBuffer: public IAudioBuffer
 { 
 public:
-	void queueAudioBuffer(char *buffer, int size){}
-        void dequeueAudioBuffer(char *buffer, int size){} 
+	void queueAudioBuffer(char *buffer, int size){ std::cout << "queueAudioBuffer called!";}
+        void dequeueAudioBuffer(char *buffer, int size){std::cout << "dequeueAudioBuffer called!";} 
 
 }; 
 
 bool callbackROS(fiona_pkg::AudioBuffer_srv::Request  &req, fiona_pkg::AudioBuffer_srv::Response &res)
 {
-        res.audiobuffer = false;
         DAudioBuffer myAudioBuffer;
         if (!strcmp(req.selection.c_str(), "queue"))
         {
