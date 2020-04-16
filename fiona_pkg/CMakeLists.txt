@@ -57,7 +57,7 @@ generate_messages(DEPENDENCIES std_msgs)
 catkin_package(CATKIN_DEPENDS message_runtime)
 
 #### Build listener ####
-#include_directories(include ${catkin_INCLUDE_DIRS})
+include_directories(include ${catkin_INCLUDE_DIRS})
 
 #add_executable(fiona_listener src/fiona_listener.cpp)
 #target_link_libraries(fiona_listener ${catkin_LIBRARIES})
