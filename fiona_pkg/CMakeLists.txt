@@ -110,7 +110,7 @@ add_dependencies(fiona_eyes_client fiona_pkg_generate_messages.cpp)
 # Client for ROSFaceExpressionSpark
 add_executable(fiona_faceexpression_client src/fiona_faceexpression_client.cpp)
 target_link_libraries(fiona_faceexpression_client ${catkin_LIBRARIES})
-add_dependencies(fiona_faceexpression_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_faceexpression_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSDetectedFacePositionConsumerSpark
 add_executable(fiona_faceposition_client src/fiona_faceposition_client.cpp)
 target_link_libraries(fiona_faceposition_client ${catkin_LIBRARIES})
