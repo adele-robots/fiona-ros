@@ -41,7 +41,6 @@ add_service_files(DIRECTORY srv FILES Animation_srv.srv
 				      DetectedFacePositionConsumer_srv.srv
 				      Eyes_srv.srv
 				      FaceExpression_srv.srv
-				      fiona_srv.srv
 				      FrameEventSubscriber_srv.srv
 				      Neck_srv.srv
 				      Renderizable_srv.srv
