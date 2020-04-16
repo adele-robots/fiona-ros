@@ -60,53 +60,53 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 
 #add_executable(fiona_listener src/fiona_listener.cpp)
 #target_link_libraries(fiona_listener ${catkin_LIBRARIES})
-#add_dependencies(fiona_listener fiona_pkg_generate_messages_cpp)
+#add_dependencies(fiona_listener ${${PROJECT_NAME}_EXPORTED_TARGETS})
 
 #### Build clients ####
 # Client for ROSAnimationSpark
 add_executable(fiona_animation_client src/fiona_animation_client.cpp)
 target_link_libraries(fiona_animation_client ${catkin_LIBRARIES})
-add_dependencies(fiona_animation_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_animation_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSApplicationSpark
 add_executable(fiona_application_client src/fiona_application_client.cpp)
 target_link_libraries(fiona_application_client ${catkin_LIBRARIES})
-add_dependencies(fiona_application_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_application_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSAudioSpark/ROSAudioBufferSpark
 add_executable(fiona_audiobuffer_client src/fiona_audiobuffer_client.cpp)
 target_link_libraries(fiona_audiobuffer_client ${catkin_LIBRARIES})
-add_dependencies(fiona_audiobuffer_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_audiobuffer_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSAudioSpark/ROSAudioSizeSpark
 add_executable(fiona_audiosize_client src/fiona_audiosize_client.cpp)
 target_link_libraries(fiona_audiosize_client ${catkin_LIBRARIES})
-add_dependencies(fiona_audiosize_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_audiosize_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSCameraSpark/RosCameraParametersSpark
 add_executable(fiona_cameraparameters_client src/fiona_cameraparameters_client.cpp)
 target_link_libraries(fiona_cameraparameters_client ${catkin_LIBRARIES})
-add_dependencies(fiona_cameraparameters_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_cameraparameters_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSCameraSpark/ROSCameraPositionSpark
 add_executable(fiona_cameraposition_client src/fiona_cameraposition_client.cpp)
 target_link_libraries(fiona_cameraposition_client ${catkin_LIBRARIES})
-add_dependencies(fiona_cameraposition_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_cameraposition_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSCameraSpark/ROSCameraRotationSpark
 add_executable(fiona_camerarotation_client src/fiona_camerarotation_client.cpp)
 target_link_libraries(fiona_camerarotation_client ${catkin_LIBRARIES})
-add_dependencies(fiona_camerarotation_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_camerarotation_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSConcurrentSpark
 add_executable(fiona_concurrent_client src/fiona_concurrent_client.cpp)
 target_link_libraries(fiona_concurrent_client ${catkin_LIBRARIES})
-add_dependencies(fiona_concurrent_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_concurrent_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSControlVoiceSpark
 add_executable(fiona_controlvoice_client src/fiona_controlvoice_client.cpp)
 target_link_libraries(fiona_controlvoice_client ${catkin_LIBRARIES})
-add_dependencies(fiona_controlvoice_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_controlvoice_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 #Client for ROSAsyncFatalErrorHandlerSpark
 add_executable(fiona_errorhandler_client src/fiona_errorhandler_client.cpp)
 target_link_libraries(fiona_errorhandler_client ${catkin_LIBRARIES})
-add_dependencies(fiona_errorhandler_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_errorhandler_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSEyesSpark
 add_executable(fiona_eyes_client src/fiona_eyes_client.cpp)
 target_link_libraries(fiona_eyes_client ${catkin_LIBRARIES})
-add_dependencies(fiona_eyes_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_eyes_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSFaceExpressionSpark
 add_executable(fiona_faceexpression_client src/fiona_faceexpression_client.cpp)
 target_link_libraries(fiona_faceexpression_client ${catkin_LIBRARIES})
@@ -114,32 +114,32 @@ add_dependencies(fiona_faceexpression_client ${${PROJECT_NAME}_EXPORTED_TARGETS}
 # Client for ROSDetectedFacePositionConsumerSpark
 add_executable(fiona_faceposition_client src/fiona_faceposition_client.cpp)
 target_link_libraries(fiona_faceposition_client ${catkin_LIBRARIES})
-add_dependencies(fiona_faceposition_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_faceposition_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSFrameEventSubscriberSpark
 add_executable(fiona_frame_client src/fiona_frame_client.cpp)
 target_link_libraries(fiona_frame_client ${catkin_LIBRARIES})
-add_dependencies(fiona_frame_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_frame_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSNeckSpark
 add_executable(fiona_neck_client src/fiona_neck_client.cpp)
 target_link_libraries(fiona_neck_client ${catkin_LIBRARIES})
-add_dependencies(fiona_neck_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_neck_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSRenderizableSpark
 add_executable(fiona_render_client src/fiona_render_client.cpp)
 target_link_libraries(fiona_render_client ${catkin_LIBRARIES})
-add_dependencies(fiona_render_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_render_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSThreadProcSpark
 add_executable(fiona_threadproc_client src/fiona_threadproc_client.cpp)
 target_link_libraries(fiona_threadproc_client ${catkin_LIBRARIES})
-add_dependencies(fiona_threadproc_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_threadproc_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Cient for ROSVoiceSpark
 add_executable(fiona_voice_client src/fiona_voice_client.cpp)
 target_link_libraries(fiona_voice_client ${catkin_LIBRARIES})
-add_dependencies(fiona_voice_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_voice_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSWindowSpark/ROSWindowSpark
 add_executable(fiona_window_client src/fiona_window_client.cpp)
 target_link_libraries(fiona_window_client ${catkin_LIBRARIES})
-add_dependencies(fiona_window_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_window_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 # Client for ROSWindowSpark/ROSGetColorDepthSpark
 add_executable(fiona_windowcolordepth_client src/fiona_windowcolordepth_client.cpp)
 target_link_libraries(fiona_windowcolordepth_client ${catkin_LIBRARIES})
-add_dependencies(fiona_windowcolordepth_client fiona_pkg_generate_messages.cpp)
+add_dependencies(fiona_windowcolordepth_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
