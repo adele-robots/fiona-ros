@@ -1,3 +1,2 @@
 string msg
----
 bool errorhandler

@@ -1,3 +1,2 @@
 string avatarFilename
----
 bool animation

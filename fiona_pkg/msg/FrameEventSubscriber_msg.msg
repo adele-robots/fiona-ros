@@ -1,3 +1,2 @@
 string void_request
----
 bool frame_subscriber
