@@ -57,14 +57,14 @@ catkin_package(CATKIN_DEPENDS message_runtime)
 
 ### Rostest ###
 find_package(rostest REQUIRED)
-add_rostest_gtest(test_animation
-  		  tests/test_animation.launch
-  		  tests/test_animation.cpp)
+
+add_rostest_gtest(test_animation tests/test_animation.launch tests/test_animation.cpp)
 target_link_libraries(test_animation ${catkin_LIBRARIES})
-add_dependencies(test_animation 
-		 fiona_animation_server 
-		 ${${PROJECT_NAME}_EXPORTED_TARGETS} 
-		 ${catkin_EXPORTED_TARGETS})
+add_dependencies(test_animation fiona_animation_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+add_rostest_gtest(test_application tests/test_application.launch tests/test_application.cpp)
+target_link_libraries(test_application ${catkin_LIBRARIES})
+add_dependencies(test_application fiona_application_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 #### Build listener ####
 include_directories(include ${catkin_INCLUDE_DIRS})
@@ -160,4 +160,6 @@ add_executable(fiona_animation_server src/fiona_animation_server.cpp)
 target_link_libraries(fiona_animation_server ${catkin_LIBRARIES})
 add_dependencies(fiona_animation_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
 
-
+add_executable(fiona_application_server src/fiona_application_server.cpp)
+target_link_libraries(fiona_application_server ${catkin_LIBRARIES})
+add_dependencies(fiona_application_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
