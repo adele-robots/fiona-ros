@@ -53,6 +53,17 @@ add_service_files(DIRECTORY srv FILES Animation_srv.srv
 generate_messages(DEPENDENCIES std_msgs)
 catkin_package(CATKIN_DEPENDS message_runtime)
 
+### Rostest ###
+find_package(rostest REQUIRED)
+add_rostest_gtest(test_animation
+  		  tests/test_animation.launch
+  		  tests/test_animation.cpp)
+target_link_libraries(test_animation ${catkin_LIBRARIES})
+add_dependencies(test_animation 
+		 fiona_animation_server 
+		 ${${PROJECT_NAME}_EXPORTED_TARGETS} 
+		 ${catkin_EXPORTED_TARGETS})
+
 #### Build listener ####
 include_directories(include ${catkin_INCLUDE_DIRS})
 
@@ -141,3 +152,10 @@ add_dependencies(fiona_window_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
 add_executable(fiona_windowcolordepth_client src/fiona_windowcolordepth_client.cpp)
 target_link_libraries(fiona_windowcolordepth_client ${catkin_LIBRARIES})
 add_dependencies(fiona_windowcolordepth_client ${${PROJECT_NAME}_EXPORTED_TARGETS})
+
+### Build servers (C++ version of the sparks) for rostest ###
+add_executable(fiona_animation_server src/fiona_animation_server.cpp)
+target_link_libraries(fiona_animation_server ${catkin_LIBRARIES})
+add_dependencies(fiona_animation_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
+
+
