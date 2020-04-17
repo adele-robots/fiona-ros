@@ -66,9 +66,9 @@ add_rostest_gtest(test_application tests/test_application.launch tests/test_appl
 target_link_libraries(test_application ${catkin_LIBRARIES})
 add_dependencies(test_application fiona_application_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
-##add_rostest_gtest(test_audiobuffer tests/test_audiobuffer.launch tests/test_audiobuffer.cpp)
-##target_link_libraries(test_audiobuffer ${catkin_LIBRARIES})
-##add_dependencies(test_audiobuffer fiona_audiobuffer_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_rostest_gtest(test_audiobuffer tests/test_audiobuffer.launch tests/test_audiobuffer.cpp)
+target_link_libraries(test_audiobuffer ${catkin_LIBRARIES})
+add_dependencies(test_audiobuffer fiona_audiobuffer_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 #### Build listener ####
 include_directories(include ${catkin_INCLUDE_DIRS})
@@ -168,6 +168,6 @@ add_executable(fiona_application_server src/fiona_application_server.cpp)
 target_link_libraries(fiona_application_server ${catkin_LIBRARIES})
 add_dependencies(fiona_application_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
 
-##add_executable(fiona_audiobuffer_server src/fiona_audiobuffer_server.cpp)
-##target_link_libraries(fiona_audiobuffer_server ${catkin_LIBRARIES})
-##add_dependencies(fiona_audiobuffer_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
+add_executable(fiona_audiobuffer_server src/fiona_audiobuffer_server.cpp)
+target_link_libraries(fiona_audiobuffer_server ${catkin_LIBRARIES})
+add_dependencies(fiona_audiobuffer_server ${${PROJECT_NAME}_EXPORTED_TARGETS})

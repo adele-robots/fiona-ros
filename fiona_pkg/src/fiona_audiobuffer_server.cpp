@@ -12,8 +12,24 @@ public:
 class DAudioBuffer: public IAudioBuffer
 { 
 public:
-	void queueAudioBuffer(char *buffer, int size){ std::cout << "queueAudioBuffer called!";}
-        void dequeueAudioBuffer(char *buffer, int size){std::cout << "dequeueAudioBuffer called!";} 
+	void queueAudioBuffer(char *buffer, int size){
+		int correct;
+		correct = 0;
+		if (!strcmp(buffer, "buffer1")){
+			if (size == 16)
+				correct = 1;
+		}	
+	}
+
+        void dequeueAudioBuffer(char *buffer, int size){
+		int correct;
+                correct = 0;
+                if (!strcmp(buffer, "buffer2")){
+                        if (size == 24)
+                                correct = 1;
+                }
+        }
+ 
 
 }; 
 
@@ -22,12 +38,12 @@ bool callbackROS(fiona_pkg::AudioBuffer_srv::Request  &req, fiona_pkg::AudioBuff
         DAudioBuffer myAudioBuffer;
         if (!strcmp(req.selection.c_str(), "queue"))
         {
-                myAudioBuffer.queueAudioBuffer((char*)req.buffer.c_str(), req.size);
+                myAudioBuffer.queueAudioBuffer((char*)req.buffer.c_str(), (long int)req.size);
                 res.audiobuffer = true;
         }
         if (!strcmp(req.selection.c_str(), "dequeue"))
         {
-                myAudioBuffer.dequeueAudioBuffer((char*)req.buffer.c_str(), req.size);
+                myAudioBuffer.dequeueAudioBuffer((char*)req.buffer.c_str(), (long int)req.size);
                 res.audiobuffer = true;
         }
         else
