@@ -12,23 +12,9 @@ public:
 class DAudioBuffer: public IAudioBuffer
 { 
 public:
-	void queueAudioBuffer(char *buffer, int size){
-		int correct;
-		correct = 0;
-		if (!strcmp(buffer, "buffer1")){
-			if (size == 16)
-				correct = 1;
-		}	
-	}
+	void queueAudioBuffer(char *buffer, int size){}
 
-        void dequeueAudioBuffer(char *buffer, int size){
-		int correct;
-                correct = 0;
-                if (!strcmp(buffer, "buffer2")){
-                        if (size == 24)
-                                correct = 1;
-                }
-        }
+        void dequeueAudioBuffer(char *buffer, int size){}
  
 
 }; 
