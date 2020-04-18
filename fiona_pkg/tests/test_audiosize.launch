@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="fiona_pkg" name="fiona_audiosize_server"  type="fiona_audiosize_server" />
+  <test pkg="fiona_pkg" test-name="test_audiosize" type="test_audiosize" />
+</launch>
+
