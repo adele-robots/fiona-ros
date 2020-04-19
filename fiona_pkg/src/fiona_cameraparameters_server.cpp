@@ -17,7 +17,7 @@ public:
 
 bool callbackROS(fiona_pkg::CameraParameters_srv::Request  &req, fiona_pkg::CameraParameters_srv::Response &res)
 {
-        DCamera myCameraParameters;
+        DCameraParameters myCameraParameters;
         if ((long int)req.IsOrtho == 1){
                 myCameraParameters.setCameraParameters(true, (float)req.VisionAngle, (float)req.nearClippingPlane, (float)req.FarClippingPlane);
 		res.camera_parameters = true;
