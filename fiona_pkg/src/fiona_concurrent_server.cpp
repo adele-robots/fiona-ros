@@ -9,7 +9,7 @@ public:
 };
 
 
-class DConcurrent: public IAnimation
+class DConcurrent: public IConcurrent
 { 
 public: 
     	void start(){}

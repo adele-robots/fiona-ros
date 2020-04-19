@@ -10,7 +10,7 @@ public:
 };
 
 
-class DControlVoice: public IAnimation
+class DControlVoice: public IControlVoice
 { 
 public: 
 	void startSpeaking(void){}
