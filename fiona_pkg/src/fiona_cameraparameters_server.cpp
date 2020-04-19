@@ -21,17 +21,19 @@ bool callbackROS(fiona_pkg::CameraParameters_srv::Request  &req, fiona_pkg::Came
         if ((long int)req.IsOrtho == (long int)1){
                 myCameraParameters.setCameraParameters(true, (float)req.VisionAngle, (float)req.nearClippingPlane, (float)req.FarClippingPlane);
 		res.camera_parameters = true;
+		return true;
 	}
 
         if ((long int)req.IsOrtho == 0){
                 myCameraParameters.setCameraParameters(false, (float)req.VisionAngle, (float)req.nearClippingPlane, (float)req.FarClippingPlane);
 		res.camera_parameters = true;
+		return true;
 	}
 
-	else 	
+	else{ 	
 		res.camera_parameters = false;
-        
-	return true;
+       		return true;
+	}
 }
 
 
