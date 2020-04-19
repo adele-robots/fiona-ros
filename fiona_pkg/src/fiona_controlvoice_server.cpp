@@ -22,21 +22,21 @@ bool callbackROS(fiona_pkg::ControlVoice_srv::Request  &req, fiona_pkg::ControlV
 {
         DControlVoice myControlVoice;
 
-        if (!strcmp(req.voice_selection.c_str(), "speaking")
+        if (!strcmp(req.voice_selection.c_str(), "speaking"))
         {
                 myControlVoice.startSpeaking();
                 res.control_voice = true;
 		return true;
         }
 
-        if (!strcmp(req.voice_selection.c_str(), "voice")
+        if (!strcmp(req.voice_selection.c_str(), "voice"))
         {
                 myControlVoice.startVoice();
                 res.control_voice = true;
 		return true;
         }
 
-        if (!strcmp(req.voice_selection.c_str(), "nospeaking")
+        if (!strcmp(req.voice_selection.c_str(), "nospeaking"))
         {
                 myControlVoice.stopSpeaking();
                 res.control_voice = true;

@@ -19,14 +19,14 @@ public:
 bool callbackROS(fiona_pkg::Concurrent_srv::Request  &req, fiona_pkg::Concurrent_srv::Response &res)
 {
         DConcurrent myConcurrent;
-        if (!strcmp(req.start_stop.c_str(), "start")
+        if (!strcmp(req.start_stop.c_str(), "start"))
         {
                 myConcurrent.start();
                 res.concurrent = true;
 		return true;
         }
 
-        if (!strcmp(req.start_stop.c_str(), "stop")
+        if (!strcmp(req.start_stop.c_str(), "stop"))
         {
                 myConcurrent.stop();
                 res.concurrent = true;
