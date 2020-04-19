@@ -18,14 +18,20 @@ public:
 bool callbackROS(fiona_pkg::CameraParameters_srv::Request  &req, fiona_pkg::CameraParameters_srv::Response &res)
 {
         DCamera myCameraParameters;
-        if (req.IsOrtho == 1)
+        if ((long int)req.IsOrtho == 1){
                 myCameraParameters.setCameraParameters(true, (float)req.VisionAngle, (float)req.nearClippingPlane, (float)req.FarClippingPlane);
+		res.camera_parameters = true;
+	}
 
-        else
+        if ((long int)req.IsOrtho == 0){
                 myCameraParameters.setCameraParameters(false, (float)req.VisionAngle, (float)req.nearClippingPlane, (float)req.FarClippingPlane);
+		res.camera_parameters = true;
+	}
 
-        res.camera_parameters = true;
-        return true;
+	else 	
+		res.camera_parameters = false;
+        
+	return true;
 }
 
 
