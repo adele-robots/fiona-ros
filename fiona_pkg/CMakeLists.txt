@@ -86,6 +86,10 @@ add_rostest_gtest(test_camerarotation tests/test_camerarotation.launch tests/tes
 target_link_libraries(test_camerarotation ${catkin_LIBRARIES})
 add_dependencies(test_camerarotation fiona_camerarotation_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_rostest_gtest(test_concurrent tests/test_concurrent.launch tests/test_concurrent.cpp)
+target_link_libraries(test_concurrent ${catkin_LIBRARIES})
+add_dependencies(test_concurrent fiona_concurrent_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 #### Build listener ####
 include_directories(include ${catkin_INCLUDE_DIRS})
 
@@ -203,3 +207,7 @@ add_dependencies(fiona_cameraposition_server ${${PROJECT_NAME}_EXPORTED_TARGETS}
 add_executable(fiona_camerarotation_server src/fiona_camerarotation_server.cpp)
 target_link_libraries(fiona_camerarotation_server ${catkin_LIBRARIES})
 add_dependencies(fiona_camerarotation_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
+
+add_executable(fiona_concurrent_server src/fiona_concurrent_server.cpp)
+target_link_libraries(fiona_concurrent_server ${catkin_LIBRARIES})
+add_dependencies(fiona_concurrent_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
