@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="fiona_pkg" name="fiona_camerarotation_server"  type="fiona_camerarotation_server" />
+  <test pkg="fiona_pkg" test-name="test_camerarotation" type="test_camerarotation" />
+</launch>
+
