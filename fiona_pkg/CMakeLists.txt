@@ -78,6 +78,10 @@ add_rostest_gtest(test_cameraparameters tests/test_cameraparameters.launch tests
 target_link_libraries(test_cameraparameters ${catkin_LIBRARIES})
 add_dependencies(test_cameraparameters fiona_cameraparameters_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_rostest_gtest(test_cameraposition tests/test_cameraposition.launch tests/test_cameraposition.cpp)
+target_link_libraries(test_cameraposition ${catkin_LIBRARIES})
+add_dependencies(test_cameraposition fiona_cameraposition_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 #### Build listener ####
 include_directories(include ${catkin_INCLUDE_DIRS})
 
@@ -187,3 +191,7 @@ add_dependencies(fiona_audiosize_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
 add_executable(fiona_cameraparameters_server src/fiona_cameraparameters_server.cpp)
 target_link_libraries(fiona_cameraparameters_server ${catkin_LIBRARIES})
 add_dependencies(fiona_cameraparameters_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
+
+add_executable(fiona_cameraposition_server src/fiona_cameraposition_server.cpp)
+target_link_libraries(fiona_cameraposition_server ${catkin_LIBRARIES})
+add_dependencies(fiona_cameraposition_server ${${PROJECT_NAME}_EXPORTED_TARGETS})

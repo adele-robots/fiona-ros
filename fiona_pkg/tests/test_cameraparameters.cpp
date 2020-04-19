@@ -15,7 +15,7 @@ TEST(TESTSuite, ValidFilename)
   srv.request.IsOrtho = 1;
   srv.request.VisionAngle = 1.2;
   srv.request.nearClippingPlane = 4.25;
-  srv.request.FarClippingPlane = 6.8
+  srv.request.FarClippingPlane = 6.8;
   client.call(srv);
 
   EXPECT_EQ(true, srv.response.camera_parameters);
