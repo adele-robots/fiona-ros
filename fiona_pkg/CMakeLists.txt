@@ -90,6 +90,10 @@ add_rostest_gtest(test_concurrent tests/test_concurrent.launch tests/test_concur
 target_link_libraries(test_concurrent ${catkin_LIBRARIES})
 add_dependencies(test_concurrent fiona_concurrent_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_rostest_gtest(test_controlvoice tests/test_controlvoice.launch tests/test_controlvoice.cpp)
+target_link_libraries(test_controlvoice ${catkin_LIBRARIES})
+add_dependencies(test_controlvoice fiona_controlvoice_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 #### Build listener ####
 include_directories(include ${catkin_INCLUDE_DIRS})
 
@@ -211,3 +215,7 @@ add_dependencies(fiona_camerarotation_server ${${PROJECT_NAME}_EXPORTED_TARGETS}
 add_executable(fiona_concurrent_server src/fiona_concurrent_server.cpp)
 target_link_libraries(fiona_concurrent_server ${catkin_LIBRARIES})
 add_dependencies(fiona_concurrent_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
+
+add_executable(fiona_controlvoice_server src/fiona_controlvoice_server.cpp)
+target_link_libraries(fiona_controlvoice_server ${catkin_LIBRARIES})
+add_dependencies(fiona_controlvoice_server ${${PROJECT_NAME}_EXPORTED_TARGETS})

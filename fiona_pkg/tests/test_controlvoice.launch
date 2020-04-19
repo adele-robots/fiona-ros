@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="fiona_pkg" name="fiona_controlvoice_server"  type="fiona_controlvoice_server" />
+  <test pkg="fiona_pkg" test-name="test_controlvoice" type="test_controlvoice" />
+</launch>
+
