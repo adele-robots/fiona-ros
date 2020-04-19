@@ -72,7 +72,11 @@ add_dependencies(test_audiobuffer fiona_audiobuffer_server ${${PROJECT_NAME}_EXP
 
 add_rostest_gtest(test_audiosize tests/test_audiosize.launch tests/test_audiosize.cpp)
 target_link_libraries(test_audiosize ${catkin_LIBRARIES})
-add_dependencies(test_audiosize fiona_audiosizer_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(test_audiosize fiona_audiosize_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+add_rostest_gtest(test_cameraparameters tests/test_cameraparameters.launch tests/test_cameraparameters.cpp)
+target_link_libraries(test_cameraparameters ${catkin_LIBRARIES})
+add_dependencies(test_cameraparameters fiona_cameraparameters_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 #### Build listener ####
 include_directories(include ${catkin_INCLUDE_DIRS})
@@ -180,3 +184,6 @@ add_executable(fiona_audiosize_server src/fiona_audiosize_server.cpp)
 target_link_libraries(fiona_audiosize_server ${catkin_LIBRARIES})
 add_dependencies(fiona_audiosize_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
 
+add_executable(fiona_cameraparameters_server src/fiona_cameraparameters_server.cpp)
+target_link_libraries(fiona_cameraparameters_server ${catkin_LIBRARIES})
+add_dependencies(fiona_cameraparameters_server ${${PROJECT_NAME}_EXPORTED_TARGETS})

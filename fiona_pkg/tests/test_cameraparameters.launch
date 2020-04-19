@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="fiona_pkg" name="fiona_cameraparameters_server"  type="fiona_cameraparameters_server" />
+  <test pkg="fiona_pkg" test-name="test_cameraparameters" type="test_cameraparameters" />
+</launch>
+
