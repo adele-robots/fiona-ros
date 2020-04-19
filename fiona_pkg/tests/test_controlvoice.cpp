@@ -15,7 +15,7 @@ TEST(TESTSuite, ValidFilename)
   srv.request.voice_selection = "speaking";
   client.call(srv);
 
-  EXPECT_EQ(true, srv.response.controlvoice);
+  EXPECT_EQ(true, srv.response.control_voice);
 }
 
 int main(int argc, char **argv)
