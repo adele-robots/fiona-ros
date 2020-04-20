@@ -98,6 +98,10 @@ add_rostest_gtest(test_errorhandler tests/test_errorhandler.launch tests/test_er
 target_link_libraries(test_errorhandler ${catkin_LIBRARIES})
 add_dependencies(test_errorhandler fiona_errorhandler_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_rostest_gtest(test_eyes tests/test_eyes.launch tests/test_eyes.cpp)
+target_link_libraries(test_eyes ${catkin_LIBRARIES})
+add_dependencies(test_eyes fiona_eyes_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 #### Build listener ####
 include_directories(include ${catkin_INCLUDE_DIRS})
 
@@ -227,3 +231,7 @@ add_dependencies(fiona_controlvoice_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
 add_executable(fiona_errorhandler_server src/fiona_errorhandler_server.cpp)
 target_link_libraries(fiona_errorhandler_server ${catkin_LIBRARIES})
 add_dependencies(fiona_errorhandler_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
+
+add_executable(fiona_eyes_server src/fiona_eyes_server.cpp)
+target_link_libraries(fiona_eyes_server ${catkin_LIBRARIES})
+add_dependencies(fiona_eyes_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
