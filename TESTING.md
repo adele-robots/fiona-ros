@@ -44,4 +44,4 @@ Steps followed for testing services:
 9. `make run_tests`
 
 # CONTINUOUS INTEGRATION
-We have uses Travis CI to build and test this project and all the previous tests. So, with each git push, travis would build the project and test it.
+We have used Travis CI to build and test this project and all the previous tests. So, with each git push, travis would build the project and test it.
