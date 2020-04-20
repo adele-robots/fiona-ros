@@ -15,8 +15,8 @@ public:
 
 bool callbackROS(fiona_pkg::WindowColorDepth_srv::Request  &req, fiona_pkg::WindowColorDepth_srv::Response &res)
 {
-        DWindow myWindow;
-        res.window_colordepth = myWindow.getColorDepth();
+        DWindowColorDepth myWindowColorDepth;
+        res.window_colordepth = myWindowColorDepth.getColorDepth();
 
         return true;
 }
