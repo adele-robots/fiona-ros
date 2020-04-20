@@ -118,6 +118,9 @@ add_rostest_gtest(test_neck tests/test_neck.launch tests/test_neck.cpp)
 target_link_libraries(test_neck ${catkin_LIBRARIES})
 add_dependencies(test_neck fiona_neck_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_rostest_gtest(test_render tests/test_render.launch tests/test_render.cpp)
+target_link_libraries(test_render ${catkin_LIBRARIES})
+add_dependencies(test_render fiona_render_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 #### Build listener ####
 include_directories(include ${catkin_INCLUDE_DIRS})
@@ -268,3 +271,7 @@ add_dependencies(fiona_frame_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
 add_executable(fiona_neck_server src/fiona_neck_server.cpp)
 target_link_libraries(fiona_neck_server ${catkin_LIBRARIES})
 add_dependencies(fiona_neck_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
+
+add_executable(fiona_render_server src/fiona_render_server.cpp)
+target_link_libraries(fiona_render_server ${catkin_LIBRARIES})
+add_dependencies(fiona_render_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
