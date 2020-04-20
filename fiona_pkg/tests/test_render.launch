@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="fiona_pkg" name="fiona_render_server"  type="fiona_render_server" />
+  <test pkg="fiona_pkg" test-name="test_render" type="test_render" />
+</launch>
+

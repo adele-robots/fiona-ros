@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="fiona_pkg" name="fiona_window_server"  type="fiona_window_server" />
+  <test pkg="fiona_pkg" test-name="test_window" type="test_window" />
+</launch>
+

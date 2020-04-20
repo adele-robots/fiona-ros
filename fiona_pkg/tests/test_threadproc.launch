@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="fiona_pkg" name="fiona_threadproc_server"  type="fiona_threadproc_server" />
+  <test pkg="fiona_pkg" test-name="test_threadproc" type="test_threadproc" />
+</launch>
+

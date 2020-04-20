@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="fiona_pkg" name="fiona_neck_server"  type="fiona_neck_server" />
+  <test pkg="fiona_pkg" test-name="test_neck" type="test_neck" />
+</launch>
+

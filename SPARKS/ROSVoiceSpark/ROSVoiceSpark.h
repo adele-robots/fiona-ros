@@ -2,7 +2,7 @@
 #define __ROSSpark_H
 
 #include "ros/ros.h"
-#include "VoiceSay_srv.h"
+#include "Voice_srv.h"
 
 #include "Component.h"
 #include "IVoice.h"

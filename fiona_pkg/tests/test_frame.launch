@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="fiona_pkg" name="fiona_frame_server"  type="fiona_frame_server" />
+  <test pkg="fiona_pkg" test-name="test_frame" type="test_frame" />
+</launch>
+

@@ -94,6 +94,10 @@ add_rostest_gtest(test_controlvoice tests/test_controlvoice.launch tests/test_co
 target_link_libraries(test_controlvoice ${catkin_LIBRARIES})
 add_dependencies(test_controlvoice fiona_controlvoice_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_rostest_gtest(test_errorhandler tests/test_errorhandler.launch tests/test_errorhandler.cpp)
+target_link_libraries(test_errorhandler ${catkin_LIBRARIES})
+add_dependencies(test_errorhandler fiona_errorhandler_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 #### Build listener ####
 include_directories(include ${catkin_INCLUDE_DIRS})
 
@@ -219,3 +223,7 @@ add_dependencies(fiona_concurrent_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
 add_executable(fiona_controlvoice_server src/fiona_controlvoice_server.cpp)
 target_link_libraries(fiona_controlvoice_server ${catkin_LIBRARIES})
 add_dependencies(fiona_controlvoice_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
+
+add_executable(fiona_errorhandler_server src/fiona_errorhandler_server.cpp)
+target_link_libraries(fiona_errorhandler_server ${catkin_LIBRARIES})
+add_dependencies(fiona_errorhandler_server ${${PROJECT_NAME}_EXPORTED_TARGETS})

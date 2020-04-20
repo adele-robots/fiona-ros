@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="fiona_pkg" name="fiona_errorhandler_server"  type="fiona_errorhandler_server" />
+  <test pkg="fiona_pkg" test-name="test_errorhandler" type="test_errorhandler" />
+</launch>
+

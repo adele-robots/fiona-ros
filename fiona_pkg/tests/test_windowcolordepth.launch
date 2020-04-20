@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="fiona_pkg" name="fiona_windowcolordepth_server"  type="fiona_windowcolordepth_server" />
+  <test pkg="fiona_pkg" test-name="test_windowcolordepth" type="test_windowcolordepth" />
+</launch>
+
