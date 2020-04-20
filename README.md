@@ -63,13 +63,13 @@ Full code is in [SPARKS](SPARKS) file.
 
 * **ROSFaceExpressionSpark**: Used to change the expression of avatar's face.
 
-* **ROSFrameEventSubscriberSpark**:
+* **ROSFrameEventSubscriberSpark**: Used to I/O of video frames.
 
 * **ROSNeckSpark**: Used to set avatar's head position.
 
-* **ROSRenderizableSpark**:
+* **ROSRenderizableSpark**: Used to synchronise video frames.
 
-* **ROSThreadProcSpark**:
+* **ROSThreadProcSpark**: Used to process multithreads.
 
 * **ROSVoiceSpark**: Used to communicate with a Text To Speech.
 
@@ -136,7 +136,7 @@ Sends x, y and z angles and awaits a boolean reply indicating if those parameter
  - Node: fiona_faceexpression_client.cpp
  - Srv: FaceExpression_srv.srv
 
-**Client for ROSFrameEventSubscriberSpark**: Sends a void_request just to receive ..........
+**Client for ROSFrameEventSubscriberSpark**: Sends a void_request to receive a boolean that says if a video frame has been detected.
  - Node: fiona_frame_client.cpp
  - Srv: FrameEventSubscriber_srv.srv
 
@@ -144,11 +144,11 @@ Sends x, y and z angles and awaits a boolean reply indicating if those parameter
  - Node: fiona_neck_client.cpp
  - Srv: Neck_srv.srv
 
-**Client for ROSRenderizableSpark**: Sends a void_request to .........
+**Client for ROSRenderizableSpark**: Sends a void_request to synchronise video frames. Returns a boolean indicating the success.
  - Node: fiona_render_client.cpp
  - Srv: Renderizable_srv.srv
 
-**Client for ROSThreadProcSpark**: Sends a void_request to .........
+**Client for ROSThreadProcSpark**: Sends a void_request to allow multithread.
  - Node: fiona_threadproc_client.cpp
  - Srv: ThreadProc_srv.srv
 
