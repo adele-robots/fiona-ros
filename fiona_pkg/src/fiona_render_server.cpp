@@ -7,7 +7,6 @@ public:
 	virtual void render(void) = 0;
 };
 
-#endif
 
 class DRenderizable: public IRenderizable
 { 
