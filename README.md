@@ -170,9 +170,9 @@ In order to see the steps for building fiona_pkg in your catkin workspace, go to
 We have a Spark that creates a publisher so we have a topic associated with a particular message type. As we are focusing on ROS-FIONA communication, this Spark will publish a string to this topic, asking ROS the message or the information that FIONA wants to receive.
 We could´ve used services as before, but with this, we also show an example of publisher/subscriber nodes.
 
-The publisher in this case is: ROSTalkerSpark.
+The publisher in this case is: **ROSTalkerSpark**.
 
-And the subscriber is the node in fiona_pkg: fiona_listener.cpp.
+And the subscriber is the node in fiona_pkg: **fiona_listener.cpp**.
 
 ## ROSTEST
 In order to test our project, we have built one test for each service. In [fiona_pkg/src](fiona_pkg/src) we have the clients and the listener explained before, but we also have servers, which are the ROS-node equivalent of the ROS-Sparks and a talker that is the ROS-node equivalent of ROSTalkerSpark.
