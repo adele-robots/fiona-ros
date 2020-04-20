@@ -106,6 +106,9 @@ add_rostest_gtest(test_faceexpression tests/test_faceexpression.launch tests/tes
 target_link_libraries(test_faceexpression ${catkin_LIBRARIES})
 add_dependencies(test_faceexpression fiona_faceexpression_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_rostest_gtest(test_faceposition tests/test_faceposition.launch tests/test_faceposition.cpp)
+target_link_libraries(test_faceposition ${catkin_LIBRARIES})
+add_dependencies(test_faceposition fiona_faceposition_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 #### Build listener ####
 include_directories(include ${catkin_INCLUDE_DIRS})
@@ -244,3 +247,8 @@ add_dependencies(fiona_eyes_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
 add_executable(fiona_faceexpression_server src/fiona_faceexpression_server.cpp)
 target_link_libraries(fiona_faceexpression_server ${catkin_LIBRARIES})
 add_dependencies(fiona_faceexpression_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
+
+add_executable(fiona_faceposition_server src/fiona_faceposition_server.cpp)
+target_link_libraries(fiona_faceposition_server ${catkin_LIBRARIES})
+add_dependencies(fiona_faceposition_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
+
