@@ -35,7 +35,7 @@ protected:
 bool callbackROS(fiona_pkg::CameraRotation_srv::Request  &req, fiona_pkg::CameraRotation_srv::Response &res)
 {
 	ICamera *myCamera;
-        myCamera->setCameraRotation(req.x, req.y, req.z);
+        myCamera->setCameraRotation((float)req.x, (float)req.y, (float)req.z);
 	res.camera_rotation = true;
         return true;
 }

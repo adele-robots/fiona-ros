@@ -35,7 +35,7 @@ protected:
 bool callbackROS(fiona_pkg::Eyes_srv::Request  &req, fiona_pkg::Eyes_srv::Response &res)
 {
 	IEyes *myEyes;
-        myEyes->rotateEye(req.pan, req.tilt);
+        myEyes->rotateEye((float)req.pan, (float)req.tilt);
 	res.eyes = true;
         return true;
 }

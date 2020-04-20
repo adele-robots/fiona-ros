@@ -35,9 +35,10 @@ bool callbackROS(fiona_pkg::AudioBuffer_srv::Request  &req, fiona_pkg::AudioBuff
 		return true;
         }
         else
+	{
                 res.audiobuffer = false;
-
-        return true;
+		return true;
+	}
 }
 
 

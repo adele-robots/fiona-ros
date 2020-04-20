@@ -35,7 +35,7 @@ protected:
 bool callbackROS(fiona_pkg::FaceExpression_srv::Request  &req, fiona_pkg::FaceExpression_srv::Response &res)
 {
         IFaceExpression *myFaceExpression;
-	myFaceExpression->setFaceExpression((char*)req.expressionName.c_str(), req.intensity);
+	myFaceExpression->setFaceExpression((char*)req.expressionName.c_str(), (float)req.intensity);
 	res.face_expression = true;
         return true;
 }

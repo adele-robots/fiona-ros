@@ -39,21 +39,25 @@ bool callbackROS(fiona_pkg::VoiceSay_srv::Request  &req, fiona_pkg::VoiceSay_srv
 	{	
 		myVoice->sayThis((char*)req.prompt.c_str());
 		res.voice_say = true;
+		return true;
         }
 	if (!strcmp(req.select.c_str(), "stop"))
         {       
                 myVoice->stopSpeech();
 		res.voice_say = true;
+		return true;
         }
 	if (!strcmp(req.select.c_str(), "wait"))
         {       
                 myVoice->waitEndOfSpeech();
                 res.voice_say = true;
+		return true;
         }
 	else
+	{
                 res.voice_say = false;
-	
-	return true;
+		return true;
+	}
 }
 
 #endif

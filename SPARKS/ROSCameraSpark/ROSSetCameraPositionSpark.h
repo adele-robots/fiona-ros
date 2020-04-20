@@ -35,7 +35,7 @@ protected:
 bool callbackROS(fiona_pkg::CameraPosition_srv::Request  &req, fiona_pkg::CameraPosition_srv::Response &res)
 {
 	ICamera *myCamera;
-        myCamera->setCameraPosition(req.x, req.y, req.z);
+        myCamera->setCameraPosition((float)req.x, (float)req.y, (float)req.z);
 	res.camera_position = true;
         return true;
 }

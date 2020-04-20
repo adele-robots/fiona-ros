@@ -35,13 +35,25 @@ protected:
 bool callbackROS(fiona_pkg::DetectedFacePositionConsumer_srv::Request  &req, fiona_pkg::DetectedFacePositionConsumer_srv::Response &res)
 {
 	IDetectedFacePositionConsumer *myDetectedFacePositionConsumer;
-	if (req.isFaceDetected == 1)
-        	myDetectedFacePositionConsumer->consumeDetectedFacePosition(true, req.x, req.y);
-	else
-		myDetectedFacePositionConsumer->consumeDetectedFacePosition(false, req.x, req.y);
+	if ((long int)req.isFaceDetected == 1)
+	{
+        	myDetectedFacePositionConsumer->consumeDetectedFacePosition(true, (double)req.x, (double)req.y);
+		res.face_detected = true;
+        	return true;
+	}
 
-	res.face_detected = true;
-        return true;
+	if ((long int)req.isFaceDetected == 0)
+	{
+		myDetectedFacePositionConsumer->consumeDetectedFacePosition(false, (double)req.x, (double)req.y);
+		res.face_detected = true;
+        	return true;
+	}
+
+	else
+	{
+		res.face_detected = false;
+		return true;
+	}
 }
 
 #endif

@@ -40,16 +40,19 @@ bool callbackROS(fiona_pkg::AudioBuffer_srv::Request  &req, fiona_pkg::AudioBuff
 	{
         	myAudioQueue->queueAudioBuffer((char*)req.buffer.c_str(), req.size);
 		res.audiobuffer = true;
+		return true;
 	}
 	if (!strcmp(req.selection.c_str(), "dequeue"))
         {
                 myAudioQueue->dequeueAudioBuffer((char*)req.buffer.c_str(), req.size);
                 res.audiobuffer = true;
+		return true;
         }
 	else
+	{
 		res.audiobuffer = false;
-
-        return true;
+		return true;
+	}
 }
 
 #endif

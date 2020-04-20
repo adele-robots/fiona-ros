@@ -39,23 +39,32 @@ bool callbackROS(fiona_pkg::Window_srv::Request  &req, fiona_pkg::Window_srv::Re
         {
 		myWindow->hide();
 		res.window = true;
+		return true;
         }
 	if(!strcmp(req.select.c_str(), "show"))
         {       
                 myWindow->show();
                 res.window = true;
+		return true;
         }
 	if(!strcmp(req.select.c_str(), "make"))
         {       
                 myWindow->makeCurrentopenGlThread();
                 res.window = true;
+		return true;
         }
 	if(!strcmp(req.select.c_str(), "swap"))
         {       
                 myWindow->openGlSwapBuffers();
                 res.window = true;
+		return true;
         }
-	return true;
+
+	else 	
+	{
+		res.window = false;
+		return true;
+	}
 }
 
 

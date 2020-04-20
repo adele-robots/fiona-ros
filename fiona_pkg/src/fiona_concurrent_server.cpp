@@ -33,9 +33,10 @@ bool callbackROS(fiona_pkg::Concurrent_srv::Request  &req, fiona_pkg::Concurrent
 		return true;
         }
 
-        else
+        else{
                 res.concurrent = false;
 		return true;
+	}
 }
 
 int main(int argc, char **argv)
