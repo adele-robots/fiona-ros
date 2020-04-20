@@ -180,6 +180,8 @@ Now we can test the services with the tests in [fiona_pkg/tests](fiona_pkg/tests
 
 To see the steps for testing, go to [TESTING.md](TESTING.md).
 
+## ROS Wiki
+All informationabout fiona_pkg is available at http://wiki.ros.org/RaquelSuarez/fiona_pkg too.
 
 ## Acknowledgement
 
