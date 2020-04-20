@@ -130,6 +130,14 @@ add_rostest_gtest(test_voice tests/test_voice.launch tests/test_voice.cpp)
 target_link_libraries(test_voice ${catkin_LIBRARIES})
 add_dependencies(test_voice fiona_voice_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_rostest_gtest(test_window tests/test_window.launch tests/test_window.cpp)
+target_link_libraries(test_window ${catkin_LIBRARIES})
+add_dependencies(test_window fiona_window_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+add_rostest_gtest(test_windowcolordepth tests/test_windowcolordepth.launch tests/test_windowcolordepth.cpp)
+target_link_libraries(test_windowcolordepth ${catkin_LIBRARIES})
+add_dependencies(test_windowcolordepth fiona_windowcolordepth_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 #### Build listener ####
 include_directories(include ${catkin_INCLUDE_DIRS})
 
@@ -291,3 +299,11 @@ add_dependencies(fiona_threadproc_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
 add_executable(fiona_voice_server src/fiona_voice_server.cpp)
 target_link_libraries(fiona_voice_server ${catkin_LIBRARIES})
 add_dependencies(fiona_voice_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
+
+add_executable(fiona_window_server src/fiona_window_server.cpp)
+target_link_libraries(fiona_window_server ${catkin_LIBRARIES})
+add_dependencies(fiona_window_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
+
+add_executable(fiona_windowcolordepth_server src/fiona_windowcolordepth_server.cpp)
+target_link_libraries(fiona_windowcolordepth_server ${catkin_LIBRARIES})
+add_dependencies(fiona_windowcolordepth_server ${${PROJECT_NAME}_EXPORTED_TARGETS})
