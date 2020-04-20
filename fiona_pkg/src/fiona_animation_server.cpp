@@ -2,20 +2,16 @@
 #include <fiona_pkg/Animation_srv.h>
 #include <cstring>
 
-#ifndef __I_ANIMATION_H
-#define __I_ANIMATION_H
-
 class IAnimation {
 public:
         virtual void playAnimation(char *animationFileName) = 0;
 };
 
-#endif
 
 class DAnimation: public IAnimation
 { 
 public: 
-    void  playAnimation(char *animationFileName) { std::cout << "fun() called"; } 
+    void  playAnimation(char *animationFileName) {} 
 }; 
 
 

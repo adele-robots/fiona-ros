@@ -138,12 +138,21 @@ add_rostest_gtest(test_windowcolordepth tests/test_windowcolordepth.launch tests
 target_link_libraries(test_windowcolordepth ${catkin_LIBRARIES})
 add_dependencies(test_windowcolordepth fiona_windowcolordepth_server ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_rostest_gtest(test_listener tests/test_listener.launch tests/test_listener.cpp)
+target_link_libraries(test_listener ${catkin_LIBRARIES})
+add_dependencies(test_listener fiona_talker ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 #### Build listener ####
 include_directories(include ${catkin_INCLUDE_DIRS})
 
-#add_executable(fiona_listener src/fiona_listener.cpp)
-#target_link_libraries(fiona_listener ${catkin_LIBRARIES})
-#add_dependencies(fiona_listener ${${PROJECT_NAME}_EXPORTED_TARGETS})
+add_executable(fiona_listener src/fiona_listener.cpp)
+target_link_libraries(fiona_listener ${catkin_LIBRARIES})
+add_dependencies(fiona_listener ${${PROJECT_NAME}_EXPORTED_TARGETS})
+
+#### Build talker to rostest the listener ####
+add_executable(fiona_talker src/fiona_talker.cpp)
+target_link_libraries(fiona_talker ${catkin_LIBRARIES})
+add_dependencies(fiona_talker ${${PROJECT_NAME}_EXPORTED_TARGETS})
 
 #### Build clients ####
 # Client for ROSAnimationSpark

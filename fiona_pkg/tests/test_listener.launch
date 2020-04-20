@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="fiona_pkg" name="fiona_talker"  type="fiona_talker" />
+  <test pkg="fiona_pkg" test-name="test_listener" type="test_listener" />
+</launch>
+
