@@ -171,6 +171,7 @@ We have a Spark that creates a publisher so we have a topic associated with a pa
 We could´ve used services as before, but with this, we also show an example of publisher/subscriber nodes.
 
 The publisher in this case is: ROSTalkerSpark.
+
 And the subscriber is the node in fiona_pkg: fiona_listener.cpp.
 
 ## ROSTEST
