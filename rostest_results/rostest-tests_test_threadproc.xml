@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="0.816"><testcase classname="rostest.runner.RosTest" name="testtest_threadproc" time="0.8160" /><system-out>&lt;![CDATA[
+[ROSTEST]setup[/home/blade/catkin_ws/src/fiona_pkg/tests/test_threadproc.launch] run_id[22e6b792-ab24-11ea-a364-448a5b8ebfa3] starting
+&amp;#x001B;[1mstarted roslaunch server http://192.168.3.143:32797/&amp;#x001B;[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.5
+
+NODES
+  /
+    fiona_threadproc_server (fiona_pkg/fiona_threadproc_server)
+
+[ROSTEST]setup[/home/blade/catkin_ws/src/fiona_pkg/tests/test_threadproc.launch] run_id[22e6b792-ab24-11ea-a364-448a5b8ebfa3] done
+[ROSTEST]Running test [test_threadproc]
+&amp;#x001B;[1mROS_MASTER_URI=http://192.168.3.143:13947/&amp;#x001B;[0m
+&amp;#x001B;[1msetting /run_id to 22e6b792-ab24-11ea-a364-448a5b8ebfa3&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[fiona_threadproc_server-1]: started with pid [22742]&amp;#x001B;[0m
+[ROSTEST]running test test_threadproc
+&amp;#x001B;[1mprocess[test_threadproc-2]: started with pid [22743]&amp;#x001B;[0m
+&amp;#x001B;[1m[test_threadproc-2] process has finished cleanly
+log file: /home/blade/.ros/log/22e6b792-ab24-11ea-a364-448a5b8ebfa3/test_threadproc-2*.log&amp;#x001B;[0m
+[ROSTEST]test [test_threadproc] finished
+[ROSTEST]test [test_threadproc] results are in [/home/blade/catkin_ws/build/test_results/fiona_pkg/rosunit-test_threadproc.xml]
+[ROSTEST]test [test_threadproc] results summary: 0 errors, 0 failures, 1 tests
+[ROSTEST][ROSTEST] test [test_threadproc] done
+[ROSTEST]tearDown[/home/blade/catkin_ws/src/fiona_pkg/tests/test_threadproc.launch]
+shutting down processing monitor...
+[fiona_threadproc_server-1] killing on exit
+... shutting down processing monitor complete
+[ROSTEST]rostest teardown /home/blade/catkin_ws/src/fiona_pkg/tests/test_threadproc.launch complete
+
+]]&gt;</system-out><system-err>&lt;![CDATA[
+
+]]&gt;</system-err></testsuite>

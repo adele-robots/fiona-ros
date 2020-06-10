@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="0.818"><testcase classname="rostest.runner.RosTest" name="testtest_errorhandler" time="0.8174" /><system-out>&lt;![CDATA[
+[ROSTEST]setup[/home/blade/catkin_ws/src/fiona_pkg/tests/test_errorhandler.launch] run_id[1ecb549c-ab24-11ea-a364-448a5b8ebfa3] starting
+&amp;#x001B;[1mstarted roslaunch server http://192.168.3.143:24349/&amp;#x001B;[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.5
+
+NODES
+  /
+    fiona_errorhandler_server (fiona_pkg/fiona_errorhandler_server)
+
+[ROSTEST]setup[/home/blade/catkin_ws/src/fiona_pkg/tests/test_errorhandler.launch] run_id[1ecb549c-ab24-11ea-a364-448a5b8ebfa3] done
+[ROSTEST]Running test [test_errorhandler]
+&amp;#x001B;[1mROS_MASTER_URI=http://192.168.3.143:32647/&amp;#x001B;[0m
+&amp;#x001B;[1msetting /run_id to 1ecb549c-ab24-11ea-a364-448a5b8ebfa3&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[fiona_errorhandler_server-1]: started with pid [22550]&amp;#x001B;[0m
+[ROSTEST]running test test_errorhandler
+&amp;#x001B;[1mprocess[test_errorhandler-2]: started with pid [22551]&amp;#x001B;[0m
+&amp;#x001B;[1m[test_errorhandler-2] process has finished cleanly
+log file: /home/blade/.ros/log/1ecb549c-ab24-11ea-a364-448a5b8ebfa3/test_errorhandler-2*.log&amp;#x001B;[0m
+[ROSTEST]test [test_errorhandler] finished
+[ROSTEST]test [test_errorhandler] results are in [/home/blade/catkin_ws/build/test_results/fiona_pkg/rosunit-test_errorhandler.xml]
+[ROSTEST]test [test_errorhandler] results summary: 0 errors, 0 failures, 1 tests
+[ROSTEST][ROSTEST] test [test_errorhandler] done
+[ROSTEST]tearDown[/home/blade/catkin_ws/src/fiona_pkg/tests/test_errorhandler.launch]
+shutting down processing monitor...
+[fiona_errorhandler_server-1] killing on exit
+... shutting down processing monitor complete
+[ROSTEST]rostest teardown /home/blade/catkin_ws/src/fiona_pkg/tests/test_errorhandler.launch complete
+
+]]&gt;</system-out><system-err>&lt;![CDATA[
+
+]]&gt;</system-err></testsuite>

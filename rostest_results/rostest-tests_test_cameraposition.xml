@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="0.816"><testcase classname="rostest.runner.RosTest" name="testtest_cameraposition" time="0.8159" /><system-out>&lt;![CDATA[
+[ROSTEST]setup[/home/blade/catkin_ws/src/fiona_pkg/tests/test_cameraposition.launch] run_id[11851642-ab24-11ea-a364-448a5b8ebfa3] starting
+&amp;#x001B;[1mstarted roslaunch server http://192.168.3.143:28355/&amp;#x001B;[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.5
+
+NODES
+  /
+    fiona_cameraposition_server (fiona_pkg/fiona_cameraposition_server)
+
+[ROSTEST]setup[/home/blade/catkin_ws/src/fiona_pkg/tests/test_cameraposition.launch] run_id[11851642-ab24-11ea-a364-448a5b8ebfa3] done
+[ROSTEST]Running test [test_cameraposition]
+&amp;#x001B;[1mROS_MASTER_URI=http://192.168.3.143:14437/&amp;#x001B;[0m
+&amp;#x001B;[1msetting /run_id to 11851642-ab24-11ea-a364-448a5b8ebfa3&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[fiona_cameraposition_server-1]: started with pid [21922]&amp;#x001B;[0m
+[ROSTEST]running test test_cameraposition
+&amp;#x001B;[1mprocess[test_cameraposition-2]: started with pid [21923]&amp;#x001B;[0m
+&amp;#x001B;[1m[test_cameraposition-2] process has finished cleanly
+log file: /home/blade/.ros/log/11851642-ab24-11ea-a364-448a5b8ebfa3/test_cameraposition-2*.log&amp;#x001B;[0m
+[ROSTEST]test [test_cameraposition] finished
+[ROSTEST]test [test_cameraposition] results are in [/home/blade/catkin_ws/build/test_results/fiona_pkg/rosunit-test_cameraposition.xml]
+[ROSTEST]test [test_cameraposition] results summary: 0 errors, 0 failures, 1 tests
+[ROSTEST][ROSTEST] test [test_cameraposition] done
+[ROSTEST]tearDown[/home/blade/catkin_ws/src/fiona_pkg/tests/test_cameraposition.launch]
+shutting down processing monitor...
+[fiona_cameraposition_server-1] killing on exit
+... shutting down processing monitor complete
+[ROSTEST]rostest teardown /home/blade/catkin_ws/src/fiona_pkg/tests/test_cameraposition.launch complete
+
+]]&gt;</system-out><system-err>&lt;![CDATA[
+
+]]&gt;</system-err></testsuite>

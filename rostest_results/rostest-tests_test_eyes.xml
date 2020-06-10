@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="0.816"><testcase classname="rostest.runner.RosTest" name="testtest_eyes" time="0.8157" /><system-out>&lt;![CDATA[
+[ROSTEST]setup[/home/blade/catkin_ws/src/fiona_pkg/tests/test_eyes.launch] run_id[1fd0d97a-ab24-11ea-a364-448a5b8ebfa3] starting
+&amp;#x001B;[1mstarted roslaunch server http://192.168.3.143:30603/&amp;#x001B;[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.5
+
+NODES
+  /
+    fiona_eyes_server (fiona_pkg/fiona_eyes_server)
+
+[ROSTEST]setup[/home/blade/catkin_ws/src/fiona_pkg/tests/test_eyes.launch] run_id[1fd0d97a-ab24-11ea-a364-448a5b8ebfa3] done
+[ROSTEST]Running test [test_eyes]
+&amp;#x001B;[1mROS_MASTER_URI=http://192.168.3.143:16379/&amp;#x001B;[0m
+&amp;#x001B;[1msetting /run_id to 1fd0d97a-ab24-11ea-a364-448a5b8ebfa3&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[fiona_eyes_server-1]: started with pid [22598]&amp;#x001B;[0m
+[ROSTEST]running test test_eyes
+&amp;#x001B;[1mprocess[test_eyes-2]: started with pid [22599]&amp;#x001B;[0m
+&amp;#x001B;[1m[test_eyes-2] process has finished cleanly
+log file: /home/blade/.ros/log/1fd0d97a-ab24-11ea-a364-448a5b8ebfa3/test_eyes-2*.log&amp;#x001B;[0m
+[ROSTEST]test [test_eyes] finished
+[ROSTEST]test [test_eyes] results are in [/home/blade/catkin_ws/build/test_results/fiona_pkg/rosunit-test_eyes.xml]
+[ROSTEST]test [test_eyes] results summary: 0 errors, 0 failures, 1 tests
+[ROSTEST][ROSTEST] test [test_eyes] done
+[ROSTEST]tearDown[/home/blade/catkin_ws/src/fiona_pkg/tests/test_eyes.launch]
+shutting down processing monitor...
+[fiona_eyes_server-1] killing on exit
+... shutting down processing monitor complete
+[ROSTEST]rostest teardown /home/blade/catkin_ws/src/fiona_pkg/tests/test_eyes.launch complete
+
+]]&gt;</system-out><system-err>&lt;![CDATA[
+
+]]&gt;</system-err></testsuite>

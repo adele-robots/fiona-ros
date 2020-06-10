@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="0.816"><testcase classname="rostest.runner.RosTest" name="testtest_neck" time="0.8156" /><system-out>&lt;![CDATA[
+[ROSTEST]setup[/home/blade/catkin_ws/src/fiona_pkg/tests/test_neck.launch] run_id[21dfabc4-ab24-11ea-a364-448a5b8ebfa3] starting
+&amp;#x001B;[1mstarted roslaunch server http://192.168.3.143:35281/&amp;#x001B;[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.5
+
+NODES
+  /
+    fiona_neck_server (fiona_pkg/fiona_neck_server)
+
+[ROSTEST]setup[/home/blade/catkin_ws/src/fiona_pkg/tests/test_neck.launch] run_id[21dfabc4-ab24-11ea-a364-448a5b8ebfa3] done
+[ROSTEST]Running test [test_neck]
+&amp;#x001B;[1mROS_MASTER_URI=http://192.168.3.143:24805/&amp;#x001B;[0m
+&amp;#x001B;[1msetting /run_id to 21dfabc4-ab24-11ea-a364-448a5b8ebfa3&amp;#x001B;[0m
+&amp;#x001B;[1mprocess[fiona_neck_server-1]: started with pid [22694]&amp;#x001B;[0m
+[ROSTEST]running test test_neck
+&amp;#x001B;[1mprocess[test_neck-2]: started with pid [22695]&amp;#x001B;[0m
+&amp;#x001B;[1m[test_neck-2] process has finished cleanly
+log file: /home/blade/.ros/log/21dfabc4-ab24-11ea-a364-448a5b8ebfa3/test_neck-2*.log&amp;#x001B;[0m
+[ROSTEST]test [test_neck] finished
+[ROSTEST]test [test_neck] results are in [/home/blade/catkin_ws/build/test_results/fiona_pkg/rosunit-test_neck.xml]
+[ROSTEST]test [test_neck] results summary: 0 errors, 0 failures, 1 tests
+[ROSTEST][ROSTEST] test [test_neck] done
+[ROSTEST]tearDown[/home/blade/catkin_ws/src/fiona_pkg/tests/test_neck.launch]
+shutting down processing monitor...
+[fiona_neck_server-1] killing on exit
+... shutting down processing monitor complete
+[ROSTEST]rostest teardown /home/blade/catkin_ws/src/fiona_pkg/tests/test_neck.launch complete
+
+]]&gt;</system-out><system-err>&lt;![CDATA[
+
+]]&gt;</system-err></testsuite>
