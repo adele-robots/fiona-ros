@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/adele-robots/fiona-ros.svg?branch=master)](https://travis-ci.org/adele-robots/fiona-ros)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 # Integration of FIONA with ROS and ROS-Industrial 
 The objective of this project is to integrate FIONA with ROS and ROSIndustrial. This objective is divided into two main tasks: 
