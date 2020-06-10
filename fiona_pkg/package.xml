@@ -6,7 +6,7 @@
 
   <maintainer email="raquel.suarez@adlrbts.com">Raquel</maintainer>
 
-  <license>BSD</license>
+  <license>Apache 2.0</license>
 
   <build_depend>message_generation</build_depend>
   <exec_depend>message_runtime</exec_depend>
