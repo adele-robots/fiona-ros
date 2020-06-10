@@ -187,17 +187,19 @@ This is going to be clearer with an example. For this example we are going to fo
 - **Testing scenario**: In order to check that client and server are built correctly, we create a ROS node server which is equivalent to FIONA Spark server, that is, we use the exact same code but we write it as an executable program running on our ROS machine instead of a Spark, which at the end FIONA uses as a dynamic library.
 That is why we say that the ROS node servers are equivalent to FIONA Sparks servers.
 
-| Client (ROS Node) | Server (ROS Node) |
-| ------------- | ------------- |
-| fiona_animation_client | fiona_animation_server |
+  | Client (ROS Node) | Server (ROS Node) |
+  | ------------- | ------------- |
+  | fiona_animation_client | fiona_animation_server |
 
-
-Now we can test the services with the tests in [fiona_pkg/tests](fiona_pkg/tests).
+A test for each service is available in [fiona_pkg/tests](fiona_pkg/tests).
+All services have been successfully tested as you can find in [fiona_pkg/test_results](fiona_pkg/test_results) so this means that FIONA Sparks, that are the servers in the real scenario, are correctly built.
 
 To see the steps for testing, go to [TESTING.md](TESTING.md).
 
+Example applications of the connection between ROS and our AI cloud FIONA will be shown as part of the following milestone.
+
 ## ROS Wiki
-All informationabout fiona_pkg is available at http://wiki.ros.org/RaquelSuarez/fiona_pkg too.
+All information about fiona_pkg is also available at http://wiki.ros.org/RaquelSuarez/fiona_pkg too.
 
 ## Acknowledgement
 
