@@ -180,9 +180,9 @@ In order to test our project, we have built one test for each service. In [fiona
 This is going to be clearer with an example. For this example we are going to focus on fiona_animation.
 - **Real scenario**: We allow ROS to get information about FIONA Animation interface with a ROS node as the client and a FIONA Spark as the server.
 
-| Client (ROS Node) | Server (FIONA Spark) |
-| ------------- | ------------- |
-| fiona_animation_client | ROSAnimationSpark |
+  | Client (ROS Node) | Server (FIONA Spark) |
+  | ------------- | ------------- |
+  | fiona_animation_client | ROSAnimationSpark |
 
 - **Testing scenario**: In order to check that client and server are built correctly, we create a ROS node server which is equivalent to FIONA Spark server, that is, we use the exact same code but we write it as an executable program running on our ROS machine instead of a Spark, which at the end FIONA uses as a dynamic library.
 That is why we say that the ROS node servers are equivalent to FIONA Sparks servers.
